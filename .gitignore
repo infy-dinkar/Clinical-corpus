@@ -1,0 +1,55 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments / Conda
+.env
+.venv/
+venv/
+env/
+ENV/
+clinicalner/
+.conda/
+conda-meta/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# NLTK downloaded data (optional, if local)
+nltk_data/
+
+
+
+# Annotation / export artifacts
+*.json
+*.jsonl
+*.spacy
+
+# Local secrets
+.env

@@ -1,0 +1,6 @@
+biopython==1.86
+nltk==3.8.1
+tqdm==4.67.3
+python-dotenv==1.0.1
+groq==0.9.0
+httpx==0.27.0
