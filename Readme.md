@@ -162,4 +162,150 @@ pmc_ner_snippets_150.txt
 llm_clinical_ner_snippets_150.txt
 ```
 
-            
+---
+
+# 🚀 NEW UPDATES (DATA PIPELINE + ANNOTATION)
+
+## 🔧 Data Processing Added
+
+After initial generation, the dataset is further processed to make it **model-ready**:
+
+* Cleaning of noisy text (removal of tags, formatting issues)
+* Preservation of clinical context
+* Conversion to structured JSON format
+* Validation of entity presence
+
+Generated JSON files:
+
+```
+pub_ner_clean_200.json
+pmc_ner_clean_150.json
+llm_ner_context_fixed.json
+```
+
+---
+
+## 🤖 Synthetic Data Augmentation
+
+To improve dataset diversity and balance:
+
+Script used:
+
+```
+generate_llm_extra_80.py
+```
+
+Output:
+
+```
+llm_generated_extra_80.json
+```
+
+---
+
+## 🔗 Final Dataset Merge
+
+All datasets are merged into a single file:
+
+Script:
+
+```
+merge_all_json.py
+```
+
+Final Output:
+
+```
+500_ner_records.json
+```
+
+Final dataset size:
+
+```
+~500+ clinical NER samples
+```
+
+---
+
+## 🏷️ Label Studio Annotation Setup
+
+The dataset is annotated using **Label Studio**.
+
+### Installation
+
+```
+pip install label-studio
+```
+
+### Run
+
+```
+label-studio
+```
+
+Open in browser:
+
+```
+http://localhost:8080
+```
+
+---
+
+### Project Configuration
+
+* Project Name: Clinical NER Final
+* Task: Named Entity Recognition
+
+---
+
+### Label Configuration
+
+```
+<View>
+  <Labels name="label" toName="text">
+    <Label value="NAME"/>
+    <Label value="AGE"/>
+    <Label value="HOSPITAL"/>
+    <Label value="DATE"/>
+    <Label value="DOCTOR"/>
+    <Label value="PHONE"/>
+    <Label value="ABHA"/>
+  </Labels>
+
+  <Text name="text" value="$text"/>
+</View>
+```
+
+---
+
+### Data Import
+
+Upload:
+
+```
+500_ner_records.json
+```
+
+---
+
+### Annotation Guidelines
+
+* Use **minimal span**
+* Avoid including prefixes (e.g., "Dr.")
+* Label exact entity text only
+
+---
+
+## 📌 Final Outcome
+
+This project now includes:
+
+* Multi-source clinical data generation
+* Data cleaning and normalization
+* Structured dataset creation (JSON)
+* Synthetic data augmentation
+* Annotation pipeline using Label Studio
+
+👉 The dataset is now **fully ready for NER model training**.
+
+---
