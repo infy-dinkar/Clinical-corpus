@@ -306,6 +306,84 @@ This project now includes:
 * Synthetic data augmentation
 * Annotation pipeline using Label Studio
 
-👉 The dataset is now **fully ready for NER model training**.
 
 ---
+---
+
+## 🏷️ Annotation & Final Dataset Preparation (D3 Work)
+
+After completing the data generation step, the dataset was manually annotated to prepare it for NER model training.
+
+### Label Studio Setup
+
+* Installed and configured **Label Studio** locally
+* Created a new project for NER annotation
+* Defined 7 entity labels:
+
+  * NAME
+  * AGE
+  * HOSPITAL
+  * DATE
+  * DOCTOR
+  * PHONE
+  * ABHA
+
+### Annotation Process
+
+* Imported the merged dataset (`500_ner_records.json`)
+* Annotated each snippet manually
+* Ensured:
+
+  * Correct entity boundaries (minimal span)
+  * No extra spaces in selections
+  * Doctor entities include prefixes like `Dr.`
+
+---
+
+### Export & Conversion
+
+* Exported annotated data from Label Studio as JSON
+* Converted it into spaCy training format using a custom script
+
+Script used:
+
+```
+convet_spcy.py
+```
+
+---
+
+### Data Cleaning
+
+During conversion:
+
+* Removed extra spaces in entity spans
+* Fixed misaligned indices
+* Dropped invalid entries
+* Ensured text-span consistency
+
+---
+
+### Final Output
+
+```
+spacy_clean_final.json
+```
+
+This file contains:
+
+* Fully annotated data
+* Clean entity spans
+* spaCy-compatible format
+
+---
+
+### Status
+
+* ✅ Data Generation Completed
+* ✅ Annotation Completed
+* ✅ Dataset Cleaned
+* ✅ Ready for Model Training
+
+---
+
