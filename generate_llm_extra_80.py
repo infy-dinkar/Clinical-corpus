@@ -37,14 +37,24 @@ def random_abha():
 
 def random_date():
     days = random.randint(1,28)
-    months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+    months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ]
     return f"{days} {random.choice(months)} {random.randint(2021,2025)}"
 
 generated = []
 
 for _ in range(80):
 
-    name = f"{random.choice(last_names)} {random.choice(['s/o','w/o'])} {random.choice(first_names)} {random.choice(last_names)}"
+    # 🔥 FULL NAME FIX (main part)
+    relation = random.choice(['s/o','w/o'])
+
+    patient_name = f"{random.choice(first_names)} {random.choice(last_names)}"
+    guardian_name = f"{random.choice(first_names)} {random.choice(last_names)}"
+
+    name = f"{patient_name} {relation} {guardian_name}"
+
     age = f"{random.randint(18,85)}-year-old"
     hospital = random.choice(hospitals)
     date = random_date()
@@ -60,8 +70,8 @@ for _ in range(80):
         }
     })
 
-# save
+# save file
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(generated, f, indent=4, ensure_ascii=False)
 
-print("✅ Generated 80 synthetic entries")
+print("✅ Generated 80 realistic synthetic entries")
