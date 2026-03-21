@@ -4,11 +4,13 @@ import random
 output_file = "llm_generated_extra_80.json"
 
 first_names = [
-    "Ravi", "Amit", "Sanjay", "Rahul", "Priya", "Neha", "Anita", "Kavita", "Sunita", "Pooja"
+    "Ravi", "Amit", "Sanjay", "Rahul", "Priya", "Neha", "Anita", "Kavita", "Sunita", "Pooja",
+    "Venkataraman", "Krishnamurthy", "Suresh", "Ramesh", "Lakshmi", "Meena", "Anirban", "Subhasish"
 ]
 
 last_names = [
-    "Sharma", "Verma", "Singh", "Gupta", "Mishra", "Das", "Pattnaik", "Ghosh", "Raghavan"
+    "Sharma", "Verma", "Singh", "Gupta", "Mishra", "Das", "Pattnaik", "Ghosh", "Raghavan",
+    "Nair", "Pillai", "Chatterjee", "Bandyopadhyay", "Mukherjee", "Patnaik", "Mohapatra", "Behera"
 ]
 
 hospitals = [
