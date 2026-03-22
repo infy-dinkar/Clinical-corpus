@@ -328,62 +328,36 @@ After completing the data generation step, the dataset was manually annotated to
   * PHONE
   * ABHA
 
-### Annotation Process
-
-* Imported the merged dataset (`500_ner_records.json`)
-* Annotated each snippet manually
-* Ensured:
-
-  * Correct entity boundaries (minimal span)
-  * No extra spaces in selections
-  * Doctor entities include prefixes like `Dr.`
 
 ---
 
-### Export & Conversion
+## 🔧 Additional Annotation Pipeline Details
 
-* Exported annotated data from Label Studio as JSON
-* Converted it into spaCy training format using a custom script
+* A subset of **25 samples** was manually annotated using Label Studio and exported as JSON for reference.
 
-Script used:
+* The full dataset (`500_ner_records.json`) was then automatically labeled using:
 
 ```
-convet_spcy.py
+labelling.py
 ```
 
----
+* This produced:
 
-### Data Cleaning
+```
+auto_labeled.json
+```
 
-During conversion:
+* The auto-labeled data was further cleaned and converted into spaCy training format using:
 
-* Removed extra spaces in entity spans
-* Fixed misaligned indices
-* Dropped invalid entries
-* Ensured text-span consistency
+```
+convert_spcy.py
+```
 
----
-
-### Final Output
+* Final output file:
 
 ```
 spacy_clean_final.json
 ```
 
-This file contains:
-
-* Fully annotated data
-* Clean entity spans
-* spaCy-compatible format
-
----
-
-### Status
-
-* ✅ Data Generation Completed
-* ✅ Annotation Completed
-* ✅ Dataset Cleaned
-* ✅ Ready for Model Training
-
----
+* This final file contains cleaned, non-overlapping entity spans and is ready for NER model training.
 

@@ -1,7 +1,6 @@
 import json
 
-# 👇 yaha apna export file daal
-INPUT_FILE = "project-4-at-2026-03-18-13-28-f12dc46a.json"
+INPUT_FILE = "auto_labeled.json"
 OUTPUT_FILE = "spacy_clean_final.json"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
@@ -11,37 +10,43 @@ spacy_data = []
 error_count = 0
 fixed_count = 0
 
+print(f"Total tasks loaded: {len(data)}")
+
 for task in data:
+
     text = task["data"]["text"]
 
-    if not task.get("annotations"):
+    # 🔥 use predictions
+    if not task.get("predictions") or len(task["predictions"]) == 0:
+        # keep empty sample also (important)
+        spacy_data.append((text, {"entities": []}))
         continue
 
     entities = []
 
-    for ann in task["annotations"][0]["result"]:
+    for ann in task["predictions"][0]["result"]:
+
         value = ann["value"]
 
         start = value["start"]
         end = value["end"]
         label = value["labels"][0]
 
-        # 🔥 FIX 1: remove leading space
+        # 🔥 fix leading spaces
         while start < end and text[start] == " ":
             start += 1
 
-        # 🔥 FIX 2: remove trailing space
+        # 🔥 fix trailing spaces
         while end > start and text[end - 1] == " ":
             end -= 1
 
-        # 🔥 FIX 3: skip invalid
         if start >= end:
             error_count += 1
             continue
 
         entity_text = text[start:end]
 
-        # 🔥 FIX 4: strip safety
+        # 🔥 strip fix
         stripped = entity_text.strip()
 
         if entity_text != stripped:
@@ -52,22 +57,43 @@ for task in data:
             end -= diff_right
             fixed_count += 1
 
-        # 🔥 FIX 5: final check
         if start >= end:
             error_count += 1
             continue
 
         entities.append((start, end, label))
 
-    # skip agar entity hi nahi hai
-    if len(entities) == 0:
-        continue
+    # 🔥 remove duplicates
+    entities = list(set(entities))
 
+    # 🔥 remove overlaps (keep longest)
+    clean_entities = []
+    last_end = -1
+
+    for start, end, label in sorted(entities, key=lambda x: (x[0], -(x[1]-x[0]))):
+        if start >= last_end:
+            clean_entities.append((start, end, label))
+            last_end = end
+
+    entities = clean_entities
+
+    # 🔥 KEEP ONLY FIRST OCCURRENCE PER LABEL
+    filtered_entities = []
+    seen_labels = set()
+
+    for start, end, label in entities:
+        if label not in seen_labels:
+            filtered_entities.append((start, end, label))
+            seen_labels.add(label)
+
+    entities = filtered_entities
+
+    # 🔥 IMPORTANT: DO NOT DROP SAMPLE
     spacy_data.append((text, {"entities": entities}))
 
-# save
+# SAVE
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(spacy_data, f, indent=2)
+    json.dump(spacy_data, f, indent=2, ensure_ascii=False)
 
 print("✅ Conversion + Cleaning Done")
 print(f"Total samples: {len(spacy_data)}")
