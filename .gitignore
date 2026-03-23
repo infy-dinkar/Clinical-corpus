@@ -46,10 +46,7 @@ nltk_data/
 
 
 
-# Annotation / export artifacts
-*.json
-*.jsonl
-*.spacy
+
 
 # Local secrets
 .env

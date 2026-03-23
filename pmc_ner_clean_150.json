@@ -1,0 +1,752 @@
+[
+    {
+        "data": {
+            "text": "Venkataraman s/o Priya Gupta, a 24-year-old patient, presented to AIIMS New Delhi on 28 August 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9055134358 and ABHA ID 75-8640-8312-4341. An 82-year-old man on long-term olmesartan therapy developed one month of watery diarrhea, weight loss, and hypotension, leading to hyperchloremic metabolic acidosis and severe AKI (serum creatinine (Cr) 6.77 mg/dL)."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty w/o Soumya Chatterjee, a 54-year-old patient, presented to Narayana Health Bengaluru on 06 May 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9989427284 and ABHA ID 89-9156-1418-1544. After applying our exclusion criteria, 52 publications remained ( . . 78 Antiviral No Yes 85 , 86 12 1 Not mentioned (MATLAB) Viral load (VL) Immune response (IR) parameters adapted from IVA infection Leander et al. 43 Antiviral No Yes 87 14 1 Least-Squares (MATLAB) VL IR parameters from literature Ke et al. 44 Antiviral No Yes 86 , 88 4, 5 2 Nonlinear mixed effects (NLME) (Monolix) VL Wang et al. 26 Antiviral No Yes 85 , 89 – 91 3, 4, 4 3 Regression modeling strategies (RMS) (R) VL (human and non-human) Fixed some IR parameters Néant et al. 38 Antiviral No (but taken into account) Yes 38 , 92 5, 6 9 Stochastic approximation expectation-maximization (SAEM) algorithm (Monolix 2018R2) VL Zhou et al. 46 Antiviral No Yes 46 , 86 , 89 , 93 – 95 32 4 Python VL, IR (white blood cells (WBC), neutrophils, lymphocytes, monocytes, cytokines) Ghosh 55 Antiviral No Yes 86 8 1 fminsearchbnd() (MATLAB) VL IR parameters mostly adapted from literature or assumed Dogra et al. 57 Antiviral No Yes 96 – 98 16 1 Linear least-squares (LLS) (MATLAB R2018a) VL, IR (CD4 + and CD8 + T cells, cytokines, antibodies) Many IR parameters from literature Yamaguchi et al. 54 Antiviral No (but taken into account) No 99 – 101 6 5 SAEM algorithm (NONMEM v7.4.4) VL Goyal et al. 77 Antiviral No Yes 86 , 89 , 93 , 94 , 102 , 103 n; &gt; 5 n* SAEM algorithm (Monolix 2019R2) VL, pharmacokinetics data (remdesivir, selinexor) *n precursors cell equations Al-Darabsah et al. 82 Antiviral Yes Yes 104 , 105 4 1 Differential evolution algorithm (MATLAB); genetic algorithm (R); NMinimize (Wolfram Mathematica) VL, IR (monocytes, CD4 + ,and CD8 + T cells) Rana et al. 53 Antiviral No Yes 106 8 1 Levenberg–Marquardt algorithm, Nelder-Mead + Random Search, curve_fit() (Python, MATLAB) VL, IR (cytokines) Many IR parameters from literature Zhang et al. 36 Antiviral No (but taken into account) Yes 107 5 8 SAEM (R 4.2.1) VL Danchin et al. 51 Antiviral No Yes 94 , 108 5 2 n.a. VL*, IR** (antibodies) *1x patient; **Mean from cohort Reis et al. 47 Antiviral No Yes 87 , 109 , 110 15 1 Differential Evolution (Python) VL, IR (antibodies, cytokines) Lin et al. 45 Antiviral No Yes 45 8 1 SAEM (Monolix 2020R1) IR (cytokines, granzyme B) Parameters for base model adopted from [ 38 ] Yang et al. 49 Antiviral No Yes 109 , 111 , 112 4 38 SAEM (Monolix 2019R2) VL, IR (antibodies) Phan et al. 74 Antiviral No (but taken into account) Yes 113 , 114 9 2 NLME (Monolix 2021) VL* *With bamlanivimab infusion Byrne et al. 68 Antiviral No (but possible problems mentioned) Yes 115 9 160 Nelder-Mead via POMP package (R) VL, IR (antibodies, CD4 + and CD8 + T cells, IFN-stimulated genes (ISGs)); all non-human Not all models included in publication Iyaniwura et al. 41 Antiviral Mentioned, not shown No 116 5 7 NLME (Monolix 2021R1) VL* *Total viral RNA and infectious virus per patient Ke et al. 35 Antiviral No Yes 35 4, 5, 6 114* NLME (Monolix 2019R2) VL Based on 5 base models with different fixed parameters Schuh et al. 84 Antiviral Yes Yes 84 4 2 fmincon() (MATLAB) VL Fan et al. 48 Antiviral No Yes 86 3, 4, 5, 6, 7 5 n.a. VL Many IR parameters from literature Tan et al. 33 Antiviral No Yes 33 4 4 Markov chain Monte Carlo (MCMC) (RStan) VL Zitzmann et al. 28 Antiviral Yes Yes 88 4, 5 2 SAEM (Monolix 2023R1) VL Vaidya et al. 61 Antiviral Yes Yes 117 4, 5, 5 3 ode45 (MATLAB 2020a) VL (non-human)* *Variants F13-E and CTan-H Schuh et al. 39 Antiviral Yes Yes 35 4 2 MATLAB 2023a VL Ghostine et al. 50 Antiviral No No 86 9 1 Ensemble Kalman filter (EnKF) VL Main focus on EnKF; IR parameters from literature Gonçalves et al. 66 Antiviral No (but taken into account) Yes 118 10, 11 2 SAEM algorithm (Monolix 2018R2) VL (non-human) IR as extension Raach et al. 24 Antiviral No (but taken into account) Yes 24 10, 11 2 Approximate Bayesian Computation (pyABC) VL (in vitro) IR as extension Zhao et al. 73 Coinfection Yes Yes 119 , 120 * 9, 7, 7, 7, 7 5 Goodman-Weare Markov chain Monte Carlo (GWMCMC) algorithm VL (HIV, SARS-COV-2), IR (CD4 + T cells) *Preprint; HIV + SARS-CoV-2 Pinky et al. 75 Coinfection No No 93 7 1 Nelder-Mead (Octave) VL Used only 1 patient Pinky et al. 60 Coinfection No Yes 86 , 121 * , 122 * 4, 7, 8 42 NLME + SAEM algorithm (Monolix 2019R1); scipy.optimize.minimize (Python) VL (non-human, coinfection); VL (human single infection) *Viral load data, not analyzed here Alexandre et al. 67 Compartment Yes Yes 123 – 125 12 8 + 12 SAEM algorithm (Monolix 2019R1) VL (non-human) Mochan et al. 65 Compartment No Yes 91 9 2 fminsearchbnd() (MATLAB) VL (non-human) Ciupe et al. 25 Compartment Yes Yes 86 6 1 Delayed rejection adaptive Metropolis (DRAM) algorithm (MATLAB) VL Dogra et al. 27 Compartment No Yes 126 , 127 40 2 Least-squares (MATLAB) VL (non-human, clinical), IR (antibodies, cytokines, lymphocytes) Many IR parameters from literature Goyal et al. 62 Compartment Yes (mentioned, not shown) Yes 91 , 128 7 + 9* 55 SAEM + MCMC (Monolix) VL (non-human) *Different models Chhetri et al. 83 Simple No Yes 86 , 129 3 1 Mean squared error (MSE) (MATLAB) VL, IR (cytokines)* Fit not shown; no separate equations for immune response; *single timepoints Lingas et al. 80 Simple No Yes 130 5 2 SAEM algorithm (Monolix 2020R1) VL Rodriguez et al. 63 Simple No No 131 4 1 Sum of squared residuals (SSR) from scipy.optimize.minimize (Python) VL (non-human) Korosec et al. 29 Simple Yes Yes 38 , 86 , 89 , 93 , 94 , 132 4, 6 2 SAEM algorithm (Monolix 2020R1) VL Dobrovolny 59 Simple No (but problems mentioned) No 128 3, 1* 2 SSR with Nelder-Mead (Octave) VL (non-human) *Not a TCL model Lingas et al. 56 Simple Yes Yes 56 5 5 SAEM algorithm VL, IR (antibodies) No separate equations for immune response Bernhauerova et al. 34 Simple No No 34 n; &gt;5 n* Bayesian inference with Goodman and Weare affine invariant ensemble MCMC sampler (MATLAB) VL (in vitro) *n latent phases Abuin et al. 76 Simple No Yes 86 3 1 Differential Evolution algorithm VL Patel et al. 79 Simple No (but taken into account) Yes 86 , 93 , 94 , 133 – 140 4 1 SAEM VL Kim et al. 31 Simple No No 86 , 93 , 136 , 141 – 144 2, 3 5 SAEM (Monolix 2019R2) VL* *SARS-CoV-2, MERS-CoV, SARS-CoV Torii et al. 64 Simple No No 64 , 145 – 147 4 1 MCMC VL (in vitro) McCormack et al. 32 Simple No (but taken into account) Yes 32 5, 7 2 MCMC VL* (in vitro) *Omicron and Delta Owens et al. 42 Simple No (but taken into account) Yes 88 3, 4, 5 9 NLME VL Model includes early and late immune response Odaka et al. 40 Simple No Yes 105 3 4 Dynamic time warping VL Includes 3 models from other authors 148 – 150 . Overview of included studies Viral dynamics are often explained using TCL models."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Arjun Mehta, a 35-year-old patient, presented to Fortis Hospital Kolkata on 23 August 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9023092784 and ABHA ID 40-1932-6015-8200. Although extensions beyond simple TCL frameworks, such as antiviral treatment modeling and immune responses, were common, relatively few studies included compartmental structures or coinfection dynamics, highlighting gaps in model complexity and data availability. . 130 Randomized, controlled clinical trial Viral load 832 Multiple timepoints per participant 80 Agostini et al. 145 In vitro study in human and animal cells Viral load n.a. Multiple timepoints post-infection 64 Al-Abdely et al. 144 Clinical observational study Viral RNA, antibodies, clinical signs 33 Multiple timepoints per participant 31 MERS study Bernhauerova et al. 34 In vitro study in human and animal cells Viral replication kinetics n.a. Multiple timepoints post-infection 34 A549-ACE2 &amp; Vero-E6 Cells Böhmer et al. 90 Clinical observational study Viral load 16 Single-timepoint measurements 26 Brouwer et al. 123 Animal study Viral load, antibodies, immune cells Ten NHPs, five rabbits, eight mice Multiple timepoints per animal 67 Cynomolgus macaques, mice, rabbits, patient sera, cells Bryan et al. 111 Clinical observational study Viral load, IgG, WBC, lymphocytes, neutrophils, CRP 245 Single (and multiple in some cases) timepoints per participant 49 Cervia et al. 112 Clinical observational study Viral load, antibodies 173 Multiple timepoints per participant 49 Chan et al. 126 Animal study Viral load, antibodies, body weight, histopathological analysis 11/8 Multiple timepoints per animal 27 Viral load data for all organs (Syrian hamsters) Cheng et al. 137 Clinical observational study Viral load, clinical signs 5 Multiple timepoints per participant 79 Choudhary et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra s/o Ramesh Kumar, a 59-year-old patient, presented to Apollo Hospital Chennai on 04 June 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9908717444 and ABHA ID 74-4363-2759-7123. preprint, same data 293T; Caco-3; Caco-2; Vero E6; BHK-21; hNECs; hamsters Mukae et al. 100 Double-blind, randomized controlled phase 2b clinical trial Viral load, clinical signs 341 Multiple timepoints per participant 54 Ensitrelvir treatment Mukae et al. 99 Double-blind, randomized controlled phase 2a clinical trial Viral load 69 Multiple timepoints per participant 54 Ensitrelvir treatment Munster et al. 91 Animal study Viral load, histopathological analysis of lung tissue 8 NHPs Daily swabs, necropsy at 7 days post-inoculation 26 , 62 , 65 Néant et al. 38 Clinical observational study Viral load, (mortality outcomes) 665 Longitudinal viral load measurements (serial samples for 284 patients); mortality tracked for all 29 , 38 , 46 Nelson et al. 115 Animal study Viral load, antibodies, immune cells, inflammatory markers, histopathological analysis 6 Multiple timepoints post-infection 68 Rhesus macaques Oh et al. 142 Clinical observational study Viral load 17 Multiple timepoints per participant 31 MERS study Padoan et al. 108 Clinical observational study Antibodies 37 Multiple timepoints per participant 51 Pan et al. 85 Clinical observational study Viral load 82 Multiple timepoints per participant 26 , 78 Peeters et al. 98 Prospective longitudinal, interventional multicohort trial Antibodies 200 Multiple timepoints per participant 57 Data were available upon request, cancer patients Peiris et al. 143 Clinical observational study Viral load 75 Multiple timepoints per participant 31 SARS-CoV study Qin et al. 129 Clinical observational study Lymphocyte counts &amp; subsets, leukocytes, NLR, monocyte/eosinophil/basophil percentages; inflammatory biomarkers and cytokines 452 Single-timepoint measurements 83 No time series data Raach et al. 24 In vitro study in human cells Viral replication kinetics n.a. Multiple timepoints post-infection 24 Ciliated, basal, and secretory cells Rockx et al. 131 Animal study Viral load*, histopathological analysis of lung tissue 12 NHPs Daily swabs, necropsy at 7 days post-inoculation 63 *Viral load for MERS-CoV &amp; SARS-CoV 2 Schuh et al. 84 Prospective cohort study Viral load 369 Multiple timepoints per participant 84 Shi et al. 117 Animal study Viral load per organ, antibodies Eight ducks, eight chickens, eight pigs, seven dogs, six ferrets, seven cats Multiple timepoints per animal 61 Ferrets, cats, dogs, pigs, chickens, ducks Singanayagam et al. 107 Clinical observational study Viral load 163 Multiple timepoints per participant 36 Szemiel et al. 147 In vitro study in human and animal cells Viral load, escape mutations n.a. Multiple timepoints post-infection 64 Tan et al. 33 National swab-and-send-home database (Singapore Ministry of Health) Viral load 159178 Multiple timepoints per participant 33 Access with permission, many different variants Thevarajan et al. 135 Case report Viral load, immune cells 1 Multiple timepoints 79 To et al. 87 Clinical observational study Viral load, antibodies 23 Multiple timepoints per participant 43 , 47 Torii et al. 64 In vitro study in human and animal cells Viral replication kinetics n.a. Multiple timepoints post-infection 64 Syrian Hamster, HEK293-C34 cells Vetter et al. 127 Clinical observational study Viral load, immune cells 5 Multiple timepoints per participant 27 Warren et al. 102 Animal study Pharmacokinetics data 3 Multiple timepoints per animal 77 Williamson et al. 128 Animal study Viral load, histopathological analysis 12 NHPs Daily swabs, necropsy at 7 days post-inoculation 59 , 62 Rhesus macaques Wölfel et al. 86 Clinical observational study Viral load, infectious virus isolation, sgRNA, viral sequencing, antibody seroconversion 9 Multiple timepoints per participant 25 , 29 , 31 , 44 , 46 , 48 , 50 , 55 , 60 , 76 – 79 , 83 Yazdanpanah et al. 92 Clinical multicentric prospective cohort study Viral load 246 Multiple timepoints per participant 38 Subcohort from 38 Yoon et al. 139 Case report Viral load 2 Multiple timepoints 79 Young et al. 93 Clinical observational study Viral load, antibodies, clinical signs 18 Multiple timepoints per participant 29 , 31 , 46 , 75 , 77 , 79 Zheng et al. 105 Retrospective cohort study Viral load, antibodies 96 Multiple timepoints per participant 40 , 82 Zhou et al. 110 Retrospective study Viral load, inflammatory markers, immune cells, clinical signs 191 Multiple timepoints per participant 47 Zhou et al. 46 Clinical observational study Viral load, immune cells, cytokines, antibodies 213 Multiple timepoints per participant 46 Zhou et al. 95 Clinical observational study Viral load, antibodies, immune cells 41 Multiple timepoints per participant 46 Zou et al. 136 Clinical observational study Viral load 18 Multiple timepoints per participant 31 , 79 We also examined whether the studies included sensitivity or identifiability analyses, both of which are important for the interpretability and reliability of the inferred model parameters (Table 1 and"
+        }
+    },
+    {
+        "data": {
+            "text": "Ghosh s/o Priya Gupta, a 61-year-old patient, presented to Apollo Hospital Chennai on 10 December 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9069728946 and ABHA ID 11-4049-4898-3617. These tissue-based models indicate how anatomical structures are able to influence parameter estimation and viral kinetics, revealing that whole body dynamics cannot be reliably inferred from single tissue models. To reliably estimate early virus dynamics within patients, several studies have investigated whether the data basis for such estimates is sufficient."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee w/o Rahul Verma, a 23-year-old patient, presented to AIIMS New Delhi on 26 July 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9761518147 and ABHA ID 19-9458-7866-2397. We examined the available data (see ."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan s/o Debasis Roy, a 80-year-old patient, presented to Fortis Hospital Kolkata on 22 November 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9065679235 and ABHA ID 76-1116-9832-6356. They show that viral clearance depends on host factors, treatment windows, and the underlying immune response, although species-specific differences can limit direct comparisons to humans. Coinfection Epidemiological observations indicate that coinfections occur in a substantial fraction of patients 70 , 71 , but only one of the included studies was based on clinical coinfection data between human immunodeficiency virus (HIV) and SARS-CoV-2 in patients from South Africa 72 ."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan s/o Anita Mishra, a 44-year-old patient, presented to KIMS Hospital Bhubaneswar on 03 June 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9734081680 and ABHA ID 75-9138-4095-5459. Another limitation is the focus on simple ODEs and TCL models, removing other modeling approaches and model structures. While current models describe viral behavior across cell lines and patients, interactions with the immune system (particularly in long COVID and severe immune responses) remain less explored."
+        }
+    },
+    {
+        "data": {
+            "text": "Das s/o Anupam Banerjee, a 24-year-old patient, presented to Apollo Hospital Chennai on 07 January 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9429757867 and ABHA ID 83-3483-4580-4910. Lancet 381 , 1960 (2013). 23746882 10.1016/S0140-6736(13)61184-8 PMC7137988 7. Huang C Clinical features of patients infected with 2019 novel coronavirus in Wuhan, China Lancet 2020 395 497 506 10.1016/S0140-6736(20)30183-5 31986264 PMC7159299 Huang, C. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Roy s/o Anita Mishra, a 59-year-old patient, presented to Apollo Hospital Chennai on 04 August 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9329705872 and ABHA ID 90-3323-9975-6034. Clinical features of patients infected with 2019 novel coronavirus in Wuhan,"
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty w/o Madhusmita Das, a 71-year-old patient, presented to Fortis Hospital Kolkata on 14 March 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9026169978 and ABHA ID 23-2865-1173-6066. Modeling SARS-CoV-2 viral kinetics and association with mortality in hospitalized patients from the French COVID cohort."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman s/o Anita Mishra, a 80-year-old patient, presented to AIIMS New Delhi on 23 February 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9942007079 and ABHA ID 48-2669-8253-9288. Virol. 96 , e0050922 (2022). 35699447 10.1128/jvi.00509-22 PMC9278147 46. Zhou Z Dynamical modelling of viral infection and cooperative immune protection in COVID-19 patients PLoS"
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Subramaniam Venkataraman, a 39-year-old patient, presented to Narayana Health Bengaluru on 14 June 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9193916235 and ABHA ID 60-8414-8152-7639. Dynamical modelling of viral infection and cooperative immune protection in COVID-19 patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta s/o Vikas Singh, a 80-year-old patient, presented to AIIMS New Delhi on 20 April 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9525197332 and ABHA ID 15-1196-1250-8804. Top. 231 , 3297–3315 (2022). 35103099 10.1140/epjs/s11734-022-00435-7 PMC8792534 54. Yamaguchi D Shimizu R Kubota R Development of a SARS-CoV-2 viral dynamic model for patients with COVID-19 based on the amount of viral RNA and viral titer CPT Pharmacometrics"
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee w/o Arjun Mehta, a 42-year-old patient, presented to KIMS Hospital Bhubaneswar on 06 April 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9113603142 and ABHA ID 78-8202-5595-7863. Pharmacol. 2024 13 1354 1365 10.1002/psp4.13164 38783551 PMC11330184 Yamaguchi, D., Shimizu, R. &amp; Kubota, R. Development of a SARS-CoV-2 viral dynamic model for patients with COVID-19 based on the amount of viral RNA and viral titer."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee s/o Anita Mishra, a 26-year-old patient, presented to Apollo Hospital Chennai on 04 February 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9284958197 and ABHA ID 78-4981-7078-3711. Pharmacol. 87 , 3425–3438 (2020). 10.1111/bcp.14718 33373059 80. Lingas G Effect of remdesivir on viral dynamics in COVID-19 hospitalized patients: a modelling analysis of the randomized, controlled, open-label DisCoVeRy trial"
+        }
+    },
+    {
+        "data": {
+            "text": "Ghosh s/o Ramesh Kumar, a 59-year-old patient, presented to AIIMS New Delhi on 09 May 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9279199435 and ABHA ID 43-4221-3651-2890. Effect of remdesivir on viral dynamics in COVID-19 hospitalized patients: a modelling analysis of the randomized, controlled, open- ."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o Ramesh Kumar, a 43-year-old patient, presented to Apollo Hospital Chennai on 07 October 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9005269772 and ABHA ID 13-6700-5951-5752. Dis. 20 , 411–412 (2020). 32105638 10.1016/S1473-3099(20)30113-4 PMC7128099 86. Wölfel R Virological assessment of hospitalized patients with COVID-2019 Nature 2020 581 465 469 10.1038/s41586-020-2196-x 32235945 Wölfel, R. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Subramaniam Venkataraman, a 74-year-old patient, presented to KIMS Hospital Bhubaneswar on 07 August 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9139114220 and ABHA ID 57-4847-5175-6331. Virological assessment of hospitalized patients with COVID-2019."
+        }
+    },
+    {
+        "data": {
+            "text": "Das s/o Anita Mishra, a 52-year-old patient, presented to Apollo Hospital Chennai on 24 March 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9289666103 and ABHA ID 44-9676-2365-1181. PLoS Biol. 19 , e3001333 (2021). 34252080 10.1371/journal.pbio.3001333 PMC8297933 89. Kim JY Viral load kinetics of SARS-CoV-2 infection in first two patients in Korea"
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan s/o Anita Mishra, a 21-year-old patient, presented to Fortis Hospital Kolkata on 04 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9327542598 and ABHA ID 47-6819-6457-9906. Viral load kinetics of SARS-CoV-2 infection in first two patients in"
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Sunita Sharma, a 34-year-old patient, presented to Apollo Hospital Chennai on 28 August 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9739452358 and ABHA ID 63-3982-1950-9493. Impact on disease mortality of clinical, biological, and virological characteristics at hospital admission and overtime in COVID-19 patients"
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma w/o Arindam Ghosh, a 56-year-old patient, presented to AIIMS New Delhi on 05 June 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9391574462 and ABHA ID 16-2653-8439-6591. Impact on disease mortality of clinical, biological, and virological characteristics at hospital admission and overtime in COVID-19 patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan s/o Sanjay Behera, a 49-year-old patient, presented to KIMS Hospital Bhubaneswar on 14 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9747080883 and ABHA ID 37-6554-1300-1369. Virol. 93 , 2149–2159 (2021). 33058220 10.1002/jmv.26601 PMC7675272 93. Young BE Epidemiologic features and clinical course of patients infected with SARS-CoV-2 in Singapore JAMA 2020 323 1488 1494 10.1001/jama.2020.3204 32125362 PMC7054855 Young, B. E. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan s/o Arindam Ghosh, a 27-year-old patient, presented to Narayana Health Bengaluru on 29 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9312922210 and ABHA ID 50-9637-6886-9487. Epidemiologic features and clinical course of patients infected with SARS-CoV-2 in"
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra s/o S. Krishnan, a 35-year-old patient, presented to Narayana Health Bengaluru on 26 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9922167001 and ABHA ID 22-1183-7938-2593. Nature 584 , 463–469 (2020). 32717743 10.1038/s41586-020-2588-y PMC7477538 98. Peeters M Reduced humoral immune response after BNT162b2 coronavirus disease 2019 messenger RNA vaccination in cancer patients under antineoplastic treatment ESMO Open 2021 6 100274 10.1016/j.esmoop.2021.100274 34597941 PMC8423808 Peeters, M. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan w/o Soumya Chatterjee, a 37-year-old patient, presented to Fortis Hospital Kolkata on 03 July 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9423124759 and ABHA ID 72-7603-2812-7156. Reduced humoral immune response after BNT162b2 coronavirus disease 2019 messenger RNA vaccination in cancer patients under antineoplastic treatment."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan w/o Soumya Chatterjee, a 64-year-old patient, presented to Apollo Hospital Chennai on 20 August 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9373931066 and ABHA ID 79-8552-1406-1509. ESMO Open 6 , 100274 (2021). 34597941 10.1016/j.esmoop.2021.100274 PMC8423808 99. Mukae H A randomized phase 2/3 study of ensitrelvir, a novel oral SARS-CoV-2 3C-like protease inhibitor, in Japanese patients with mild-to-moderate COVID-19 or asymptomatic SARS-CoV-2 infection: results of the phase 2a part"
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra w/o Subramaniam Venkataraman, a 59-year-old patient, presented to Fortis Hospital Kolkata on 20 June 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9933251966 and ABHA ID 56-9888-2182-4539. A randomized phase 2/3 study of ensitrelvir, a novel oral SARS-CoV-2 3C-like protease inhibitor, in Japanese patients with mild-to-moderate COVID-19 or asymptomatic SARS-CoV-2 infection: results of the phase 2a part."
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee s/o Arindam Ghosh, a 30-year-old patient, presented to Fortis Hospital Kolkata on 25 November 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9540199885 and ABHA ID 85-5488-7255-2490. Agents Chemother. 66 , e0069722 (2022). 36098519 10.1128/aac.00697-22 PMC9578433 100. Mukae H Efficacy and safety of ensitrelvir in patients with mild-to-moderate coronavirus disease 2019: the phase 2b part of a randomized, placebo-controlled, phase 2/3 study"
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta s/o Subramaniam Venkataraman, a 64-year-old patient, presented to AIIMS New Delhi on 18 December 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9753056102 and ABHA ID 69-4155-5533-1020. Efficacy and safety of ensitrelvir in patients with mild-to-moderate coronavirus disease 2019: the phase 2b part of a randomized, placebo-controlled, phase 2/3 study."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta s/o Neha Singh, a 66-year-old patient, presented to AIIMS New Delhi on 19 September 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9710912565 and ABHA ID 18-6160-9413-1484. Blood 129 , 3165–3174 (2017). 28336527 10.1182/blood-2016-11-750158 PMC5524530 104. Han M Assessing SARS-CoV-2 RNA levels and lymphocyte/T cell counts in COVID-19 patients revealed initial immune status as a major determinant of disease severity"
+        }
+    },
+    {
+        "data": {
+            "text": "Tiwari s/o Arjun Mehta, a 77-year-old patient, presented to Narayana Health Bengaluru on 11 December 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9096690939 and ABHA ID 99-2069-7786-5845. Assessing SARS-CoV-2 RNA levels and lymphocyte/T cell counts in COVID-19 patients revealed initial immune status as a major determinant of disease severity."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Debasis Mohanty, a 18-year-old patient, presented to AIIMS New Delhi on 08 September 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9166366569 and ABHA ID 67-3322-6842-6748. Immunol. 209 , 657–668 (2020). 32860073 10.1007/s00430-020-00693-z PMC7454137 105. Zheng S Viral load dynamics and disease severity in patients infected with SARS-CoV-2 in Zhejiang province, China, January-March 2020: retrospective cohort study BMJ 2020 369 m1443 10.1136/bmj.m1443 32317267 PMC7190077 Zheng, S. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan w/o Subramaniam Venkataraman, a 20-year-old patient, presented to Fortis Hospital Kolkata on 05 April 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9251927938 and ABHA ID 21-6650-7886-2010. Viral load dynamics and disease severity in patients infected with SARS-CoV-2 in Zhejiang province, China, January-March 2020: retrospective cohort study."
+        }
+    },
+    {
+        "data": {
+            "text": "Tiwari w/o Subramaniam Venkataraman, a 38-year-old patient, presented to Fortis Hospital Kolkata on 02 January 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9439770125 and ABHA ID 11-4795-9150-9563. Med. 58 , 1081–1088 (2020). 32301749 10.1515/cclm-2020-0443 109. Long QX Antibody responses to SARS-CoV-2 in patients with COVID-19"
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Sanjay Tiwari, a 55-year-old patient, presented to Fortis Hospital Kolkata on 15 December 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9385231498 and ABHA ID 14-1512-4024-6370. Antibody responses to SARS-CoV-2 in patients with COVID-19."
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra w/o Sunita Sharma, a 43-year-old patient, presented to KIMS Hospital Bhubaneswar on 13 March 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9222209710 and ABHA ID 94-9584-2216-4477. Med. 26 , 845–848 (2020). 32350462 10.1038/s41591-020-0897-1 110. Zhou F Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study Lancet 2020 395 1054 1062 10.1016/S0140-6736(20)30566-3 32171076 PMC7270627 Zhou, F. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Roy w/o S. Krishnan, a 66-year-old patient, presented to Narayana Health Bengaluru on 08 November 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9828032637 and ABHA ID 70-8174-9528-8641. Clinical course and risk factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort study."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o Lakshmi Narayanan, a 47-year-old patient, presented to KIMS Hospital Bhubaneswar on 12 December 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9529801254 and ABHA ID 90-8420-1122-8935. Nature 585 , 273–276 (2020). 32516797 10.1038/s41586-020-2423-5 PMC7486271 129. Qin C Dysregulation of immune response in patients with coronavirus 2019 (COVID-19) in Wuhan, China"
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Subramaniam Venkataraman, a 75-year-old patient, presented to Apollo Hospital Chennai on 28 April 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9216212229 and ABHA ID 76-8838-6844-1213. Dysregulation of immune response in patients with coronavirus 2019 (COVID-19) in Wuhan,"
+        }
+    },
+    {
+        "data": {
+            "text": "Verma w/o S. Krishnan, a 32-year-old patient, presented to Apollo Hospital Chennai on 25 March 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9967873800 and ABHA ID 20-4319-8211-6812. Dis. 71 , 762–768 (2020). 32161940 10.1093/cid/ciaa248 PMC7108125 130. Ader F Remdesivir plus standard of care versus standard of care alone for the treatment of patients admitted to hospital with COVID-19 (DisCoVeRy): a phase 3, randomised, controlled, open-label trial Lancet"
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan w/o Rahul Verma, a 62-year-old patient, presented to AIIMS New Delhi on 19 July 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9635662464 and ABHA ID 39-5964-6821-6068. Remdesivir plus standard of care versus standard of care alone for the treatment of patients admitted to hospital with COVID-19 (DisCoVeRy): a phase 3, randomised, controlled, open- ."
+        }
+    },
+    {
+        "data": {
+            "text": "Ghosh s/o Rahul Verma, a 22-year-old patient, presented to KIMS Hospital Bhubaneswar on 03 October 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9786872800 and ABHA ID 58-9638-2441-9051. Science 373 , eabi5273 (2021). 10.1126/science.abi5273 PMC9267347 34035154 133. Kim SE Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients"
+        }
+    },
+    {
+        "data": {
+            "text": "Roy w/o Pradeep Pattnaik, a 36-year-old patient, presented to Fortis Hospital Kolkata on 13 October 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9193070301 and ABHA ID 94-5575-6920-8387. Viral kinetics of SARS-CoV-2 in asymptomatic carriers and presymptomatic patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik s/o Kavita Sharma, a 78-year-old patient, presented to AIIMS New Delhi on 04 October 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9424753084 and ABHA ID 77-2442-6297-4468. Infect. 81 , 318–356 (2020). 32315724 10.1016/j.jinf.2020.04.014 PMC7166038 135. Thevarajan I Breadth of concomitant immune responses prior to patient recovery: a case report of non-severe COVID-19"
+        }
+    },
+    {
+        "data": {
+            "text": "Roy s/o S. Krishnan, a 19-year-old patient, presented to KIMS Hospital Bhubaneswar on 05 December 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9096956066 and ABHA ID 32-3353-5676-2299. Breadth of concomitant immune responses prior to patient recovery: a case report of non-severe COVID-19."
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra w/o Vikas Singh, a 72-year-old patient, presented to Fortis Hospital Kolkata on 23 February 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9329805827 and ABHA ID 97-1251-8853-4057. Med. 26 , 453–455 (2020). 32284614 10.1038/s41591-020-0819-2 PMC7095036 136. Zou L SARS-CoV-2 viral load in upper respiratory specimens of infected patients"
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma w/o Soumya Chatterjee, a 21-year-old patient, presented to Fortis Hospital Kolkata on 14 May 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9251213656 and ABHA ID 18-6956-5249-9272. SARS-CoV-2 viral load in upper respiratory specimens of infected patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Verma w/o Arjun Mehta, a 74-year-old patient, presented to AIIMS New Delhi on 18 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9726893243 and ABHA ID 75-4666-3935-9465. J. Med. 382 , 1177–1179 (2020). 32074444 10.1056/NEJMc2001737 PMC7121626 137. Cheng CY Lopinavir/ritonavir did not shorten the duration of SARS CoV-2 shedding in patients with mild pneumonia in Taiwan"
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Sanjay Behera, a 44-year-old patient, presented to Apollo Hospital Chennai on 30 April 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9249594991 and ABHA ID 28-4838-4191-1738. Lopinavir/ritonavir did not shorten the duration of SARS CoV-2 shedding in patients with mild pneumonia in"
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee s/o Pradeep Pattnaik, a 36-year-old patient, presented to AIIMS New Delhi on 16 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9175253161 and ABHA ID 29-9210-9726-7630. Infect. 53 , 488–492 (2020). 32331982 10.1016/j.jmii.2020.03.032 PMC7194913 138. Kawasuji H Transmissibility of COVID-19 depends on the viral load around onset in adult and symptomatic patients PLoS ONE 2020 15 e0243597 10.1371/journal.pone.0243597 33296437 PMC7725311 Kawasuji, H. et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Tiwari w/o Sanjay Tiwari, a 61-year-old patient, presented to AIIMS New Delhi on 18 October 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9689634806 and ABHA ID 91-1301-1862-1478. Transmissibility of COVID-19 depends on the viral load around onset in adult and symptomatic patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman s/o Vikas Singh, a 29-year-old patient, presented to AIIMS New Delhi on 04 July 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9909483290 and ABHA ID 61-5250-1952-5818. Dis. 26 , 2497–2499 (2020). 32497001 10.3201/eid2610.202449 PMC7510743 141. Kim ES Clinical course and outcomes of patients with severe acute respiratory syndrome coronavirus 2 infection: a preliminary report of the first 28 patients from the Korean cohort study on COVID-19"
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman s/o Vikas Singh, a 20-year-old patient, presented to Fortis Hospital Kolkata on 14 October 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9408005570 and ABHA ID 52-1414-6639-8750. Clinical course and outcomes of patients with severe acute respiratory syndrome coronavirus 2 infection: a preliminary report of the first 28 patients from the Korean cohort study on COVID-19."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Sanjay Behera, a 37-year-old patient, presented to Narayana Health Bengaluru on 25 September 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9567498912 and ABHA ID 70-4555-2793-4073. Lancet 361 , 1767–1772 (2003). 12781535 10.1016/S0140-6736(03)13412-5 PMC7112410 144. Al-Abdely HM Middle East respiratory syndrome coronavirus infection dynamics and antibody responses among clinically diverse patients, Saudi Arabia"
+        }
+    },
+    {
+        "data": {
+            "text": "Verma w/o Sanjay Tiwari, a 80-year-old patient, presented to Narayana Health Bengaluru on 16 October 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9116528665 and ABHA ID 17-6972-5661-4174. Middle East respiratory syndrome coronavirus infection dynamics and antibody responses among clinically diverse patients, Saudi"
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Arjun Mehta, a 30-year-old patient, presented to Fortis Hospital Kolkata on 10 May 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9544280330 and ABHA ID 35-6167-1343-3659. mBio 9 , e00221-18 (2018). 10.1128/mBio.00221-18 PMC5844999 29511076 146. Martinot M Emerging RNA-dependent RNA polymerase mutation in a remdesivir-treated B-cell immunodeficient patient with protracted coronavirus disease 2019"
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta w/o Soumya Chatterjee, a 27-year-old patient, presented to Narayana Health Bengaluru on 17 March 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9670396611 and ABHA ID 97-8775-7371-3335. Emerging RNA-dependent RNA polymerase mutation in a remdesivir-treated B-cell immunodeficient patient with protracted coronavirus disease 2019."
+        }
+    },
+    {
+        "data": {
+            "text": "Behera w/o R. Raghavan, a 34-year-old patient, presented to Apollo Hospital Chennai on 09 July 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9812937891 and ABHA ID 12-6005-6209-5362. pmc Am J Case Rep Am J Case Rep 2001 amjcasereps amjcaserep The American Journal of Case Reports 1941-5923 International Scientific Information, Inc. PMC12988646 PMC12988646.1 12988646 12988646 41804043 10.12659/AJCR.950412 950412 1 Articles Peripheral Neuropathy Linked to Recreational Nitrous Oxide Use: A Case Report Jun Jeun 1 A B C D E F Giammanco Peter Aldo https://orcid.org/0009-0005-0487-6119 2 A B C D E F Haslett Jack J. https://orcid.org/0000-0002-3598-4527 2 A B C D E F Duran Andres 2 A B C D E F Rosenthal Johanna L. 3 A B C D E F 1 Department of Psychiatry, Arrowhead Regional Medical Center, Colton, CA, USA 2 School of Medicine, California University of Science and Medicine, Colton, CA, USA 3 Department of Neurology, California University of Science and Medicine, Colton, CA, USA Corresponding Author: Jack J. Haslett, e-mail: Jack.haslett@md.cusm.edu A Study Design B Data Collection C Statistical Analysis D Data Interpretation E Manuscript Preparation F Literature Search G Funds Collection 2026 10 3 2026 29 1 2026 27 505175 e950412 25 6 2025 09 1 2026 10 03 2026 15 03 2026 15 03 2026 © Am J Case Rep, 2026 2026 https://creativecommons.org/licenses/by-nc-nd/4.0/ This work is licensed under Creative Common Attribution-NonCommercial-NoDerivatives 4.0 International ( CC BY-NC-ND 4.0 ) Patient: Male, 24-year-old Final Diagnosis: Vitamin B12 deficiency Symptoms: Parasthesia Clinical Procedure: — Specialty: Neurology Objective: Rare disease Background Nitrous oxide (N 2 O) deactivates vitamin B12 and, when inhaled regularly, can lead to vitamin B12 deficiency, resulting in temporary or permanent peripheral neuropathy."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan s/o Sanjay Tiwari, a 73-year-old patient, presented to KIMS Hospital Bhubaneswar on 22 September 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9821467913 and ABHA ID 65-4193-6058-6249. This case report describes a young adult with N 2 O-induced B12 deficiency, whose neurological symptoms were initially misattributed to a distracting traumatic injury from a motor vehicle collision (MVC). Case Report We present a case of a previously healthy 24-year-old man who presented with low back pain and bilateral leg paresthesia that began 2 days after being a passenger in an"
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik s/o Anupam Banerjee, a 32-year-old patient, presented to AIIMS New Delhi on 21 January 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9331279738 and ABHA ID 78-4065-4002-7554. The patient was discharged within 24 hours without requiring admission. Conclusions This case underscores the importance of considering N 2 O use in patients with unexplained neurological deficits, along with obtaining directed social history and serum B12 levels when this differential diagnosis is plausible."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Sanjay Behera, a 46-year-old patient, presented to Fortis Hospital Kolkata on 06 October 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9021015815 and ABHA ID 41-8844-1586-5260. This report describes the case of a 24-year-old man with a history of recreational N 2 O inhalation use presenting with lower limb weakness and paresthesia due to vitamin B12 deficiency. Case Report A 24-year-old man with no medical history presented with low back pain and bilateral lower extremity numbness and tingling starting 3 days prior to his presentation."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee w/o Arjun Mehta, a 70-year-old patient, presented to KIMS Hospital Bhubaneswar on 20 June 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9623566148 and ABHA ID 56-4128-2731-4280. The patient noted that he was involved in an MVC 5 days prior to his presentation, so 2 days before the onset of his symptoms."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Lakshmi Narayanan, a 64-year-old patient, presented to Narayana Health Bengaluru on 31 October 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9754428258 and ABHA ID 65-4996-8352-3659. Following the MVC, the patient went to a party later that night."
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Neha Singh, a 21-year-old patient, presented to KIMS Hospital Bhubaneswar on 06 December 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9542162345 and ABHA ID 57-9020-3741-2153. On physical examination, the patient was alert and oriented to person, place, and time."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan s/o Sanjay Tiwari, a 52-year-old patient, presented to AIIMS New Delhi on 27 May 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9120384753 and ABHA ID 14-9762-7041-2471. Additionally, the patient was mildly anemic at 11.7 g/dL (reference 13–17 g/dL) and although within the normal range, mean corpuscular volume was 96 (reference 80–100) which was near the upper limit, and is consistent with B12 deficiency."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta s/o Madhusmita Das, a 60-year-old patient, presented to AIIMS New Delhi on 20 August 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9501086717 and ABHA ID 73-3729-5328-3400. The patient consumed a regular diet, had no surgical history, and denied use of medications on a regular basis."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Vikas Singh, a 55-year-old patient, presented to Apollo Hospital Chennai on 12 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9559446725 and ABHA ID 52-6074-9354-9938. The patient denied any family history of similar symptoms. Autoimmune pernicious anemia was also a possible differential diagnosis."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan w/o Soumya Chatterjee, a 52-year-old patient, presented to KIMS Hospital Bhubaneswar on 17 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9427604786 and ABHA ID 31-1894-3599-2569. Additionally, the patient denied any history of B12 deficiency."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee s/o Sunita Sharma, a 73-year-old patient, presented to Fortis Hospital Kolkata on 22 July 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9861502150 and ABHA ID 23-3604-5880-9117. The patient was administered 1000 mcg of vitamin B12 intramuscularly. Given the history of substance use, we postulated N 2 O use as a possible cause for the B12 deficiency, prompting further interviewing of the patient."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh s/o Vikas Singh, a 41-year-old patient, presented to Narayana Health Bengaluru on 30 April 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9853879738 and ABHA ID 69-4714-5897-9103. The patient noted that he woke up with the new reported neurologic symptoms 2 days after using N 2"
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Kavita Sharma, a 68-year-old patient, presented to Fortis Hospital Kolkata on 18 November 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9690266968 and ABHA ID 13-5369-5156-1305. Similarly, since the patient was not reporting any neck pain and there was evidence of clinical improvement, a cervical MRI was not obtained. Considering the updated social history, symptom improvement after B12 repletion, and unremarkable imaging, the bilateral lower extremity paresthesia was clinically attributed to B12 deficiency secondary to N 2 O use."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o Rahul Verma, a 49-year-old patient, presented to AIIMS New Delhi on 10 July 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9117488712 and ABHA ID 61-8521-7976-8142. The patient was advised to take over-the-counter B12 supplements, educated on the effects of N 2 O, and prescribed physical therapy for his lumbar strain."
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik w/o Lakshmi Narayanan, a 60-year-old patient, presented to KIMS Hospital Bhubaneswar on 02 March 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9738516707 and ABHA ID 80-2507-6827-2449. Since the patient improved clinically and was medically stable, he was deemed stable for discharge from the emergency department without admission."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Soumya Chatterjee, a 49-year-old patient, presented to Narayana Health Bengaluru on 19 August 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9033255448 and ABHA ID 72-1673-3119-7328. The patient was advised to follow-up with his primary care physician for further management. Given this diagnostic challenge, the patient agreed to our presentation of his rare case in the medical literature to highlight the importance of considering substance use when evaluating a patient with unexplained neurologic signs and symptoms."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o Priya Gupta, a 32-year-old patient, presented to Narayana Health Bengaluru on 22 August 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9012815782 and ABHA ID 64-4689-6876-3438. A patient Consent-to-Disclose Form was signed."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o Sanjay Tiwari, a 38-year-old patient, presented to Narayana Health Bengaluru on 01 October 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9243657086 and ABHA ID 76-7720-7041-5049. Ethical approval was obtained from Arrowhead Regional Medical Center’s Institutional Review Board committee (Case Study 25-03). Discussion This patient presented with lower back pain, gait instability, and bilateral lower extremity paresthesia in the setting of a recent"
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee w/o Pradeep Pattnaik, a 68-year-old patient, presented to Narayana Health Bengaluru on 30 August 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9087210662 and ABHA ID 32-8332-3629-7237. However, although post-traumatic neuropathy is consistent with this patient’ onset of symptoms within a few days of his accident, the rapid resolution of symptoms is uncommon and the timing of improvement after vitamin B12 supplementation, in addition to complete blood count notable for low hemoglobin and slightly elevated mean corpuscular volume along with unremarkable imaging, supports B12 deficiency as a more likely diagnosis. As opposed to common causes of B12 deficiency, such as malabsorption, dietary insufficiency, and pernicious anemia, an abrupt onset of symptoms should prompt consideration of N 2 O as a possible cause [ 13 ]."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Vikas Singh, a 37-year-old patient, presented to Narayana Health Bengaluru on 17 April 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9037569761 and ABHA ID 59-9630-2311-5920. Such diagnostic challenges are frequently compounded by incomplete patient histories and, similar to our experience, previous reports have noted that N 2 O use is often not disclosed during initial patient interviews and may only be identified through repeated, directed questioning [ 13 , 17 ]."
+        }
+    },
+    {
+        "data": {
+            "text": "Das s/o Sanjay Tiwari, a 33-year-old patient, presented to KIMS Hospital Bhubaneswar on 24 June 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9031357124 and ABHA ID 18-1311-9077-6410. Parenteral administration is advised to ensure rapid absorption; however, in patients without concern for malabsorption, data suggests that oral dosing is equivalent or possibly superior in correcting serum levels and neurologic symptoms [ 10 ]."
+        }
+    },
+    {
+        "data": {
+            "text": "Roy w/o Madhusmita Das, a 78-year-old patient, presented to Apollo Hospital Chennai on 18 November 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9038929486 and ABHA ID 29-4484-3686-8473. These phenomena boded well for our patient, who presented relatively promptly after onset and with mild symptoms, with the likely cause withdrawn. Strengths of this case include a systematic approach to rule out alternative causes of B12 deficiency and the timely recognition of a reversible cause."
+        }
+    },
+    {
+        "data": {
+            "text": "Kumar w/o Anupam Banerjee, a 66-year-old patient, presented to Fortis Hospital Kolkata on 16 August 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9958796892 and ABHA ID 42-5628-8047-8341. Limitations include self-reported N 2 O use, limited generalizability, and lack of long-term follow-up since the patient was treated in the emergency department without admission to the hospital. In this case, clinical recognition of this timing led to focused questioning, which revealed the presence of N 2 O use not initially disclosed."
+        }
+    },
+    {
+        "data": {
+            "text": "Das s/o S. Krishnan, a 49-year-old patient, presented to KIMS Hospital Bhubaneswar on 19 October 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9772690965 and ABHA ID 49-5903-3679-2534. Similarly, when an easily identifiable cause of B12 deficiency is not apparent and the onset of neurologic symptoms is rapid, N 2 O use should be investigated, especially in young patients with known recreational drug use."
+        }
+    },
+    {
+        "data": {
+            "text": "Kumar w/o Rahul Verma, a 18-year-old patient, presented to AIIMS New Delhi on 25 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9431438414 and ABHA ID 74-2965-2623-6850. B12 supplementation can lead to impressive symptomatic improvement, and educating the patient on N 2 O’s harms can lower the risk of associated neurologic complications that are not always reversible. Financial support: None declared Conflict of interest: None declared Publisher’s note: All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers."
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta s/o Madhusmita Das, a 65-year-old patient, presented to KIMS Hospital Bhubaneswar on 13 August 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9166937298 and ABHA ID 23-2115-5806-6861. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher Patient Consent: Informed consent was obtained from the patient, and all relevant ethical guidelines have been followed. References 1 Kaar SJ Ferris J Waldron J Up: The rise of nitrous oxide abuse."
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee w/o Arjun Mehta, a 30-year-old patient, presented to AIIMS New Delhi on 01 July 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9848900555 and ABHA ID 87-8129-7997-1254. Biological properties of vitamin B12 Nutr Res Rev 2025 38 1 338 70 39376196 10.1017/S0954422424000210 5 Gwathmey KG Grogan J Nutritional neuropathies Muscle Nerve 2020 62 1 13 29 31837157 10.1002/mus.26783 6 Nunn JF Clinical aspects of the interaction between nitrous oxide and vitamin B12 Br J Anaesth 1987 59 1 3 13 3548788 10.1093/bja/59.1.3 7 Oussalah A Julien M Levy J Global burden related to nitrous oxide exposure in medical and recreational settings: A systematic review and individual patient data meta-analysis J Clin Med 2019 8 4 551 31018613 10.3390/jcm8040551 PMC6518054 8 Hunt A Harrington D Robinson S Vitamin B12 deficiency BMJ 2014 349 g5226 25189324 10.1136/bmj.g5226 9 Ankar A Kumar A Vitamin B12 deficiency StatPearls StatPearls Publishing 2025 Accessed December 22, 2025 http://www.ncbi.nlm.nih.gov/books/NBK441923/0 28722952 10 Stabler SP Vitamin B12 deficiency N Engl J Med 2013 368 2 0 149 60 23301732 10.1056/NEJMcp1113996 11 Mauermann ML Staff NP Peripheral neuropathy: A review JAMA 2026 335 3 255 66 41247746 10.1001/jama.2025.19400 12 Fundaun J Kolski M Baskozos G Nerve pathology and neuropathic pain after whiplash injury: A systematic review and meta-analysis Pain 2022 163 7 e789 e811 35050963 10.1097/j.pain.0000000000002509 PMC7612893 13 Thayabaran D Burrage D Nitrous oxide-induced neurotoxicity: A case report and literature review Br J Clin Pharmacol 2021 87 9 3622 26 33590530 10.1111/bcp.14779 14 Simpson K Mukherji A Recreational nitrous oxide induced subacute combined degeneration of the spinal cord: A case report Clin Case Rep 2023 11 1 e6770 36694646 10.1002/ccr3.6770 PMC9842780 15 Swart G Blair C Lu Z Nitrous oxide-induced myeloneuropathy Eur J Neurol 2021 28 12 3938 44 34427020 10.1111/ene.15077 16 Pedersen OB Hvas AM Grove EL A 19-year-old man with a history of recreational inhalation of nitrous oxide with severe peripheral neuropathy and central pulmonary embolism Am J Case Rep 2021 22 e931936 34376630 10.12659/AJCR.931936 PMC8366572 17 Porruvecchio E Shrestha S Khuu B Functional vitamin B12 deficiency in association with nitrous oxide inhalation Cureus 2022 14 1 e21394 35103219 10.7759/cureus.21394 PMC8776518 18 Lan SY Kuo CY Chou CC Recreational nitrous oxide abuse related subacute combined degeneration of the spinal cord in adolescents – A case series and literature review Brain Dev 2019 41 5 428 35 30611595 10.1016/j.braindev.2018.12.003 19 Obeid R Andrès E Češka R Diagnosis, treatment and long-term management of vitamin B12 deficiency in adults: A Delphi expert consensus J Clin Med 2024 13 8 2176 38673453 10.3390/jcm13082176 PMC11050313 20 Healton EB Savage DG Brust JC Neurologic aspects of cobalamin deficiency Medicine (Baltimore) 1991 70 4 229 45 1648656 10.1097/00005792-199107000-00001 , CBC, and vitamin B12 results on admission. BMP Value Units Reference CBC Value Units Reference Sodium 138 mmol/L 135–148 WBC 11.6 ×1000/uL 4.5–11.1 Potassium 4.1 mmol/L 3.5–5.5 RBC 3.77 ×10 6 /uL 4.5–5.9 Chloride 105 mmol/L 98–110 Hemoglobin 11.7 g/dL 13–17 CO 2 20 mmol/L 24–34 Hematocrit 36 % 41–53 BUN 18 mg/dL 8–20 MCV 96 fL 80–100 Creatinine 0.67 mg/dL 0.5–1.5 MCH 31 pg 26–32 Glucose 102 mg/dL 65–125 MCHC 32 g/dL 33–35 Calcium 8.8 mg/dL 8.5–10.5 RDW 15 % 11–15 Anion gap 13 mmol/L 4–12 MPV 10.3 fL 7–11 Platelets 435 ×1000/uL 120–360 BMP – basic metabolic panel; CBC – complete blood count; WBC – white blood cell count; RBC – red blood cell count; CO 2 – carbon dioxide; BUN – blood urea nitrogen; MCV – mean corpuscular volume; MCH – mean corpuscular hemoglobin; MCHC – mean corpuscular hemoglobin concentration; RDW – red cell distribution width; MPV – mean platelet volume."
+        }
+    },
+    {
+        "data": {
+            "text": "Verma s/o Anupam Banerjee, a 72-year-old patient, presented to Narayana Health Bengaluru on 29 July 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9593817618 and ABHA ID 32-9411-6958-5827. pmc Eur J Clin Microbiol Infect Dis Eur J Clin Microbiol Infect Dis 365 springeropen European Journal of Clinical Microbiology &amp; Infectious Diseases 0934-9723 1435-4373 pmc-is-collection-domain yes pmc-collection-title Springer PMC12987847 PMC12987847.1 12987847 12987847 41171360 10.1007/s10096-025-05327-x 5327 1 Brief Report Within patient horizontal gene transfer dynamics of a bla NDM−7 plasmid among four different bacterial species van Katwijk O. Oscar.katwijk@mumc.nl 1 Mulder M. 1 van Alphen L. 1 Landman F. 2 Hendrickx A. 2 Verkerk A. 1 Sligman L. 3 Schnabel R. 3 van der Zwet W. 1 Smeets E. 1 Dirks JAMC. 4 Jamin C. 2 1 https://ror.org/02d9ce178 grid.412966.e 0000 0004 0480 1382 Department of Medical Microbiology, Infectious Diseases and Infection Prevention, Maastricht University Medical Centre, Maastricht, the Netherlands 2 https://ror.org/01cesdt21 grid.31147.30 0000 0001 2208 0118 Center for Infectious Disease Control (CIb), National Institute for Public Health and the Environment (RIVM), Bilthoven, the Netherlands 3 https://ror.org/02d9ce178 grid.412966.e 0000 0004 0480 1382 Department of Intensive Care, Maastricht University Medical Centre, Maastricht, the Netherlands 4 https://ror.org/03bfc4534 grid.416905.f Department of Medical Microbiology, Zuyderland Medical Centre, Heerlen, the Netherlands 31 10 2025 2026 45 2 509508 599 603 6 8 2025 17 10 2025 31 10 2025 15 03 2026 15 03 2026 © The Author(s) 2025 2025 https://creativecommons.org/licenses/by/4.0/ Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made."
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee s/o Neha Singh, a 19-year-old patient, presented to Narayana Health Bengaluru on 15 January 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9384536128 and ABHA ID 12-3655-7830-9059. The species all carried an bla NDM−7 encoding incX3 plasmid, which demonstrated horizontal gene transfer within this patient. Conclusion This case report underlines the importance of mobile genetic elements in infection control, as they serve as transmission vehicles for antimicrobial resistance beyond the spread of identical bacterial strains. Supplementary Information The online version contains supplementary material available at 10.1007/s10096-025-05327-x. Keywords Horizontal gene transfer Carbapenemase-producing blaNDM7 IncX3 Antimicrobial resistance Infection control pmc-status-qastatus 0 pmc-status-live yes pmc-status-embargo no pmc-status-released yes pmc-prop-open-access yes pmc-prop-olf no pmc-prop-manuscript no pmc-prop-legally-suppressed no pmc-prop-has-pdf yes pmc-prop-has-supplement yes pmc-prop-pdf-only no pmc-prop-suppress-copyright no pmc-prop-is-real-version no pmc-prop-is-scanned-article no pmc-prop-preprint no pmc-prop-in-epmc yes pmc-license-ref CC BY issue-copyright-statement © Springer-Verlag GmbH Germany, part of Springer Nature 2026 Case report We describe the case of a 73-year old male, who was referred to our tertiary referral hospital for a laparoscopic pylorus-resecting pancreatoduodenectomy because of an intraductal papillary mucinous neoplasm."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o Lakshmi Narayanan, a 19-year-old patient, presented to Narayana Health Bengaluru on 09 January 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9754156241 and ABHA ID 35-8980-7700-3151. Three days after surgery, the patient developed fever; a CT-scan revealed peritonitis and leakage from the hepaticojejunostomy."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty w/o Madhusmita Das, a 26-year-old patient, presented to KIMS Hospital Bhubaneswar on 04 May 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9481791310 and ABHA ID 82-8408-5780-1273. The patient improved and piperacillin-tazobactam was stopped 10 days after drainage. Shortly after, the patient developed fever again following the placement of a percutaneous transhepatic cholangiogram (PTC) drain."
+        }
+    },
+    {
+        "data": {
+            "text": "Verma s/o Ramesh Kumar, a 79-year-old patient, presented to Fortis Hospital Kolkata on 19 December 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9984552473 and ABHA ID 50-8862-6392-9563. A spill from the PTC-drain was suspected because of the polymicrobial nature of the blood culture and a clinically stable and quickly recovering patient. In the next few months, the patient improved and deteriorated several times and was admitted to the Intensive care unit (ICU) twice."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta s/o Soumya Chatterjee, a 44-year-old patient, presented to Apollo Hospital Chennai on 27 November 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9304514319 and ABHA ID 11-7851-2973-6972. planticola. Despite the patient’s status as a known carrier of carbapenemase-producing Citrobacter freundii , he consistently was treated with piperacillin-tazobactam and drainage and improved rapidly. Several months later, the patient developed a fever due to a new abdominal collection."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma w/o Sunita Sharma, a 48-year-old patient, presented to AIIMS New Delhi on 01 September 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9228391003 and ABHA ID 49-3941-4925-9856. Piperacillin-tazobactam and drainage did not improve the situation of the patient, thus meropenem and colistin were administered."
+        }
+    },
+    {
+        "data": {
+            "text": "Behera s/o Madhusmita Das, a 38-year-old patient, presented to AIIMS New Delhi on 20 July 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9595244188 and ABHA ID 48-7204-9571-7437. Unfortunately, the patient succumbed to septic shock. Over a period of five months, 47 Enterobacterales isolates were identified from 30 clinical cultures (of which 15 CIM positive) and 21 (of which 13 CIM positive) screening cultures of this patient using MALDI-TOF MS (Biomérieux, France) and later verified with WGS (supplemental methods)."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta w/o Debasis Roy, a 63-year-old patient, presented to AIIMS New Delhi on 09 July 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9999027386 and ABHA ID 23-5543-4465-7038. marcescens in our patient clustered together and differed only 1 and 2 SNPs as inferred by split k-mer analysis (SKA)."
+        }
+    },
+    {
+        "data": {
+            "text": "Behera s/o Rahul Verma, a 69-year-old patient, presented to Fortis Hospital Kolkata on 26 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9531666548 and ABHA ID 33-7982-8641-7134. 1 An overview of hospital admissions, relevant cultures and antimicrobial treatment of our patient"
+        }
+    },
+    {
+        "data": {
+            "text": "Behera s/o Neha Singh, a 57-year-old patient, presented to KIMS Hospital Bhubaneswar on 20 February 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9491495599 and ABHA ID 36-4818-7232-2688. The strength of our case-report lies in the longitudinal sampling and detailed molecular diagnostics of resistance acquisition within a single patient over five months."
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta w/o Lakshmi Narayanan, a 80-year-old patient, presented to AIIMS New Delhi on 16 November 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9718879867 and ABHA ID 96-6509-5779-5323. Specifically, we document the transition from wild type phenotypes to CPE in vivo, in a Dutch patient without further external exposure, supported by whole-genome sequencing and plasmid typing. The prevalence of CRE/CPE during the admission period was 0.25% for Enterobacterales other than E. coli, K. pneumoniae and E. cloacae in the"
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan s/o Anita Mishra, a 38-year-old patient, presented to KIMS Hospital Bhubaneswar on 16 December 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9072096884 and ABHA ID 92-6157-7275-9480. [personal communication C. Jamin]. During the first months of admission, the patient was repeatedly treated with piperacillin-tazobactam, despite the fact that the isolates were not susceptible."
+        }
+    },
+    {
+        "data": {
+            "text": "Tiwari s/o Arjun Mehta, a 42-year-old patient, presented to Fortis Hospital Kolkata on 11 June 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9977838778 and ABHA ID 81-7590-4379-6608. These antibiotics were chosen because of the limited availability of new broader spectrum antibiotics in our low CPE setting and because the patient improved under therapy, likely due to source control."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o R. Raghavan, a 48-year-old patient, presented to AIIMS New Delhi on 18 March 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9357472236 and ABHA ID 43-1996-1816-1154. All authors read and approved the final manuscript. Data availability All NGS data has been deposited under BioProject PRJNA1242729. Declarations The authors declare that no funds, grants, or other support were received during the preparation of this manuscript Informed consent Informed consent for the publication of this case report was obtained from the deceased patient’s next of kin. Competing interests The authors declare no competing interests. References 1. van der Zwaluw K de Haan A Pluister GN Bootsma HJ de Neeling AJ Schouls LM The carbapenem inactivation method (CIM), a simple and low-cost alternative for the Carba NP test to assess phenotypic carbapenemase activity in gram-negative rods PLoS ONE 2015 10 3 e0123690 10.1371/journal.pone.0123690 25798828 PMC4370852 van der Zwaluw K, de Haan A, Pluister GN, Bootsma HJ, de Neeling AJ, Schouls LM (2015) The carbapenem inactivation method (CIM), a simple and low-cost alternative for the Carba NP test to assess phenotypic carbapenemase activity in gram-negative rods."
+        }
+    },
+    {
+        "data": {
+            "text": "Mehta w/o Vikas Singh, a 31-year-old patient, presented to Apollo Hospital Chennai on 07 November 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9701070772 and ABHA ID 26-8078-7278-7916. JAC-Antimicrobial Resist 6(4):dlae124 10.1093/jacamr/dlae124 PMC11306930 39119043 6. Plantinga NL van Asten SAV Schijffelen MJ de Wit RJ Witteveen S de Haan A Healthcare professionals challenged by 14 distinct carbapenemase-producing micro-organisms in a war-injured Ukrainian patient Infection 2025 10.1007/s15010-025-02523-x 40272698 PMC12316792 Plantinga NL, van Asten SAV, Schijffelen MJ, de Wit RJ, Witteveen S, de Haan A et al (2025) Healthcare professionals challenged by 14 distinct carbapenemase-producing micro-organisms in a war-injured Ukrainian patient."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty w/o Kavita Sharma, a 55-year-old patient, presented to Apollo Hospital Chennai on 27 September 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9683348646 and ABHA ID 63-1974-9590-1747. Microorganisms 4(3):29 27681923 10.3390/microorganisms4030029 PMC5039589 9. Moser AI Keller PM Campos-Madueno EI Poirel L Nordmann P Endimiani A A patient with multiple carbapenemase producers including an unusual Citrobacter sedlakii hosting an IncC Bla NDM-1- and armA-carrying plasmid Pathog Immun 2021 6 2 119 134 10.20411/pai.v6i2.482 34988342 PMC8714174 Moser AI, Keller PM, Campos-Madueno EI, Poirel L, Nordmann P, Endimiani A (2021) A patient with multiple carbapenemase producers including an unusual Citrobacter sedlakii hosting an IncC Bla NDM-1- and armA-carrying plasmid."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o Debasis Mohanty, a 40-year-old patient, presented to Narayana Health Bengaluru on 10 December 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9734014958 and ABHA ID 51-5951-1139-8656. Pathog Immun 6(2):119–134 34988342 10.20411/pai.v6i2.482 PMC8714174 10. Kocer K Boutin S Dalpke AH Heeg K Mutters NT Nurjadi D Comparative genomic analysis reveals a high prevalence of inter-species in vivo transfer of carbapenem-resistance plasmids in patients with haematological malignancies Clin Microbiol Infect 2020 26 6 780e1 780e8 10.1016/j.cmi.2019.10.014 31654794 Kocer K, Boutin S, Dalpke AH, Heeg K, Mutters NT, Nurjadi D (2020) Comparative genomic analysis reveals a high prevalence of inter-species in vivo transfer of carbapenem-resistance plasmids in patients with haematological malignancies."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma w/o Sanjay Behera, a 43-year-old patient, presented to Fortis Hospital Kolkata on 01 January 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9127072575 and ABHA ID 46-9411-6945-7520. In persons living with HIV, cotrimoxazole is typically used in combination with other SCAR-associated medications, creating challenges for culprit drug ascertainment. OBJECTIVE: To investigate the utility of IFN-γ release enzyme-linked immunospot (ELISpot) in identifying cotrimoxazole as the culprit drug in SCAR. METHODS: Registry of Severe Cutaneous Adverse Reactions–validated SCAR cases from the prospective AFRIS-CAR patient registry with Naranjo and/or Algorithm of Drug Causality for Epidermal Necrolysis causality scores completed were eligible."
+        }
+    },
+    {
+        "data": {
+            "text": "Venkataraman w/o Anupam Banerjee, a 56-year-old patient, presented to Fortis Hospital Kolkata on 17 September 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9222474312 and ABHA ID 72-1078-8989-5948. Ex vivo testing such as enzyme-linked immunospot (ELISpot) and lymphocyte transformation test (LTT) have been explored with differing success in other drug–SCAR combinations including cotrimoxazole SCAR, but limited data are available from PLWH, who frequently have low CD4 T-cell counts. 19 , 20 A study comparing IFN-γ ELISpot and LTT performance in patients with SCAR found that regardless of the drug tested, the sensitivity and specificity were similar in DRESS, but in SJS/TEN IFN-γ ELISpots had higher sensitivity. 21 Unfortunately, there are no data regarding the performance of these ex vivo tools in"
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Arjun Mehta, a 70-year-old patient, presented to Fortis Hospital Kolkata on 17 September 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9206973720 and ABHA ID 95-1825-9463-5736. In addition, we aimed to compare the performance of IFN-γ ELISpot with alternative in vivo approaches such as patch testing and the reference standard oral challenge. METHODS Study population The Immune-Mediated Adverse Drug Reactions registry and biorepository was developed through the Groote Schuur Hospital Combined Drug Allergy Clinic, an interdivisional, interdepartmental service based at Groote Schuur Hospital, Cape Town, South Africa, and the first multidisciplinary drug allergy clinic on the African continent. 22 Groote Schuur Hospital is one of two tertiary hospitals that serve the Cape Town metropole (population of ~4.7 million) of South Africa, and our combined drug allergy clinic sees a median of 18 patients monthly."
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra w/o Anita Mishra, a 72-year-old patient, presented to AIIMS New Delhi on 16 February 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9573092176 and ABHA ID 29-4870-6455-8362. For this study, we identified patients admitted to the tertiary care hospital between 2019 and 2024 with treatment-limiting SCAR in whom cotrimoxazole was a suspected offending drug."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o Ramesh Kumar, a 46-year-old patient, presented to Narayana Health Bengaluru on 07 November 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9759667810 and ABHA ID 99-1288-3321-2448. All patients gave informed consent, and the study was approved by the University of Cape Town Faculty of Health Sciences Ethics Committee (HREC R031/2018)."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Sanjay Behera, a 40-year-old patient, presented to Apollo Hospital Chennai on 30 November 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9169599574 and ABHA ID 54-1622-2501-8676. Before this project, patch testing for cotrimoxazole was not routinely done, but through the registry this service was increasingly performed as the study progressed. Oral challenge. All patients had risk–benefit assessments before consideration for the cotrimoxazole oral challenge."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan w/o Lakshmi Narayanan, a 73-year-old patient, presented to Apollo Hospital Chennai on 19 November 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9689417527 and ABHA ID 18-4660-1195-8501. The full dose of cotrimoxazole (80 mg TMP/400 mg SMX) was administered to patients with close monitoring by clinicians for the possibility of the recurrence of a reaction."
+        }
+    },
+    {
+        "data": {
+            "text": "Mishra s/o Sanjay Behera, a 21-year-old patient, presented to Fortis Hospital Kolkata on 21 September 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9521532429 and ABHA ID 22-8896-3534-6585. Analyses were done on R programming software (version 4.4.2). RESULTS Patient demographics, SCAR phenotypes, and drug causality assessments We identified a total of 86 SCAR cases in which cotrimoxazole was a suspected offending drug."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o Anita Mishra, a 54-year-old patient, presented to AIIMS New Delhi on 17 September 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9549971696 and ABHA ID 87-3993-4577-4782. Of the whole cohort, characteristics of 25 patients (32%) have been described previously. 15 Mean age of the cohort was 39 years (SD, 11 years; 52% male)."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan w/o Arjun Mehta, a 27-year-old patient, presented to KIMS Hospital Bhubaneswar on 03 September 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9829578131 and ABHA ID 55-5432-8880-2373. No IFN-γ ELISpot positivity was seen in samples collected past the acute phase (&gt;90 days) at a cutoff of 50 SFU/million cells, but no oral challenge was done for these patients to confirm false negatives ( Figure E3, D and E )."
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee w/o Subramaniam Venkataraman, a 23-year-old patient, presented to Fortis Hospital Kolkata on 31 May 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9747321401 and ABHA ID 65-1905-3828-6715. No statistical difference was seen comparing median CD4 count of IFN-γ ELISpot positive and negative cases ( P &gt; .05). Eight SCAR patients had an IFN-γ ELISpot performed at two different time points (range, 4–180 days) with five concordant and three discordant results (see .jaci-inpractice.org )."
+        }
+    },
+    {
+        "data": {
+            "text": "Roy w/o R. Raghavan, a 79-year-old patient, presented to Apollo Hospital Chennai on 23 December 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9473281613 and ABHA ID 48-8498-6282-6752. ."
+        }
+    },
+    {
+        "data": {
+            "text": "Mohanty s/o R. Raghavan, a 44-year-old patient, presented to Fortis Hospital Kolkata on 22 June 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9086606505 and ABHA ID 77-9941-1733-1877. In two patients, cotrimoxazole IFN-γ ELISpot positivity occurred together with a positive result for rifampicin; however, both patients tolerated rifampicin during sequential oral challenge, demonstrating these as false-positive rifampicin results. To assess the specificity of our assay, we performed IFN-γ ELISpots on 12 controls (eight drug-tolerant HIV-positive TB-positive (median cotrimoxazole tolerance, 96 days) and four HIV-TB-negative with a SCAR to other drugs and during the acute SCAR admission (&lt;30 days from SCAR onset)."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee s/o Arindam Ghosh, a 74-year-old patient, presented to Fortis Hospital Kolkata on 18 February 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9836301601 and ABHA ID 15-7211-9313-1032. All control results were negative at a cutoff of 50 SFU/million cells, confirming the specificity of the assay even during acute SCAR. Oral challenge It was considered safe to perform 12 (one SJS/TEN, eight DRESS, and three GBFDE) oral challenges to cotrimoxazole (dose: 80 mg/400 mg TMP/SMX); eight patients (67%) had positive reactions."
+        }
+    },
+    {
+        "data": {
+            "text": "Raghavan w/o Kavita Sharma, a 18-year-old patient, presented to Fortis Hospital Kolkata on 07 February 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9688029155 and ABHA ID 95-3072-4780-4119. Oral challenges to non-cotrimoxazole drugs were performed in 56 of 79 patients; most reacted to one or more first-line anti-TB drugs (32%; 18 of 56), further helping to confirm the specificity of negative cotrimoxazole IFN-γ ELISpots results. Sensitivity and specificity of cotrimoxazole IFN-γ ELISpot assay ."
+        }
+    },
+    {
+        "data": {
+            "text": "Behera s/o Lakshmi Narayanan, a 58-year-old patient, presented to Apollo Hospital Chennai on 11 August 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9431834005 and ABHA ID 66-7971-9336-2479. Cotrimoxazole IFN-γ ELISpot identified three of 12 patients who were also positive with the oral challenge, whereas the oral challenge was positive in an additional five (42%; eight of 12) IFN-γ ELISpot-negative patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Vikas Singh, a 47-year-old patient, presented to AIIMS New Delhi on 29 January 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9514276138 and ABHA ID 97-4775-8258-5652. HIV status and the level of immunosuppression (77%; 10 of 13 PLWH) could have a role, because diminished patch responses were reported in cancer patients with immunosuppression 40 ; however the consistency of the current data with other cotrimoxazole SCAR skin patch testing studies suggests that other factors are predominant. More recently, the IFN-γ ELISpot assay has been reported to offer better sensitivity over patch testing for confirming cotrimoxazole as the offending drug by identifying drug-specific T cells. 14 , 33 Unlike in aminopenicillins, in which the sensitivity of IFN-γ ELISpot has been consistently more than 50%, particularly for malignant pleural effusion and DRESS phenotypes, cotrimoxazole IFN-γ ELISpot sensitivities are lower and similar to what we report here among predominantly PLWH. 14 , 37 However, there remain scarce data against the reference standard of oral challenge given the risks of oral re-exposure after SCAR, in contrast to lower-risk phenotypes such as malignant pleural effusion."
+        }
+    },
+    {
+        "data": {
+            "text": "Kumar s/o Anupam Banerjee, a 28-year-old patient, presented to Apollo Hospital Chennai on 02 July 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9178954240 and ABHA ID 92-4456-2967-8449. Our group has been pioneering safe oral challenge protocols in more severe SCAR phenotypes in the context of life-threatening infections such as HIV and TB, 14 , 15 and through these protocols ( Figure E2 ) some patients in the current cohort underwent oral re-exposure, often combined with challenge to first-line anti-TB drugs."
+        }
+    },
+    {
+        "data": {
+            "text": "Roy w/o Neha Singh, a 44-year-old patient, presented to KIMS Hospital Bhubaneswar on 11 November 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9146513623 and ABHA ID 43-8027-1122-6895. Furthermore, Awad et al 48 demonstrated the utility of blister fluid for cotrimoxazole IFN-γ ELISpot, showing positive responses in a patient with a negative PBMC IFN-γ ELISpot result."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Sunita Sharma, a 19-year-old patient, presented to AIIMS New Delhi on 27 June 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9228557905 and ABHA ID 66-8308-1685-7565. Oral challenge is contraindicated in patients with SCAR, and selection of these patients was done after a thorough case-by-case risk–benefit assessment."
+        }
+    },
+    {
+        "data": {
+            "text": "Ghosh s/o Rahul Verma, a 28-year-old patient, presented to AIIMS New Delhi on 13 September 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9673359637 and ABHA ID 86-5379-6070-3411. We were unable to test TMP in the IFN-γ ELISpots, and this may have missed a few TMP-only positive patients."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh s/o Debasis Roy, a 50-year-old patient, presented to AIIMS New Delhi on 03 November 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9018394725 and ABHA ID 76-2809-9936-1817. Dermatology 2023 ; 239 : 966 – 75 . 37793359 10.1159/000534342 PMC10711762 10. Chang HM , Tsai HC , Lee SS , Kunin C , Lin PC , Wann SR , High daily doses of trimethoprim/sulfamethoxazole are an independent risk factor for adverse reactions in patients with pneumocystis pneumonia and AIDS ."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Debasis Roy, a 78-year-old patient, presented to KIMS Hospital Bhubaneswar on 21 November 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9506403985 and ABHA ID 92-5395-3382-4445. Desensitization to cotrimoxazole (trimethoprimsulphamethoxazole) in HIV-infected patients: is patch testing a useful predictor of reaction? J Infect 1999 ; 38 : 111 – 5 . 10342651 10.1016/s0163-4453(99)90078-6 17. Pinho A , Coutinho I , Gameiro A , Gouveia M , Gonçalo M ."
+        }
+    },
+    {
+        "data": {
+            "text": "Das w/o Anita Mishra, a 54-year-old patient, presented to Apollo Hospital Chennai on 06 April 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9939074801 and ABHA ID 86-6733-3977-4828. Management of adverse reactions to prophylactic trimethoprim-sulfamethoxazole in patients with human immunodeficiency virus infection ."
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta w/o Rahul Verma, a 35-year-old patient, presented to Apollo Hospital Chennai on 05 May 2024 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9681243522 and ABHA ID 76-7303-7847-3751. J Am Acad Dermatol 2014 ; 71 : 1000.e2 . 25437959 10.1016/j.jaad.2013.11.053 24. Sekula P , Dunant A , Mockenhaupt M , Naldi L , Bavinck JNB , Halevy S , Comprehensive survival analysis of a cohort of patients with Stevens–Johnson syndrome and toxic epidermal necrolysis ."
+        }
+    },
+    {
+        "data": {
+            "text": "Verma s/o Arjun Mehta, a 31-year-old patient, presented to Apollo Hospital Chennai on 09 March 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9548767971 and ABHA ID 62-1625-8686-4911. Inflamm Allergy Drug Targets 2012 ; 11 : 227 – 34 . 22338581 10.2174/187152812800392751 37. Trubiano JA , Strautins K , Redwood AJ , Pavlos R , Konvinse KC , Aung AK , The combined utility of ex vivo IFN-γ release enzyme-linked immunospot assay and in vivo skin testing in patients with antibiotic-associated severe cutaneous adverse reactions ."
+        }
+    },
+    {
+        "data": {
+            "text": "Das s/o Anupam Banerjee, a 57-year-old patient, presented to AIIMS New Delhi on 14 April 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9425930593 and ABHA ID 85-4221-1806-3047. Quantitative impairment of primary inflammatory response in patients with cancer ."
+        }
+    },
+    {
+        "data": {
+            "text": "Kumar w/o Anita Mishra, a 39-year-old patient, presented to AIIMS New Delhi on 13 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. R.K. Mehta. Hospital records include contact number 9367252281 and ABHA ID 70-8666-6293-5803. Curr Opin Allergy Clin Immunol 2019 ; 19 : 272 – 82 . 31145192 10.1097/ACI.0000000000000545 PMC7236403 44. Clark SA , Martin SL , Pozniak A , Steel A , Ward B , Dunning J , Tuberculosis antigen-specific immune responses can be detected using enzyme-linked immunospot technology in human immunodeficiency virus (HIV)-1 patients with advanced disease ."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan s/o Vikas Singh, a 51-year-old patient, presented to KIMS Hospital Bhubaneswar on 23 May 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9012587147 and ABHA ID 96-5409-8316-3889. In six patients, cotrimoxazole IFN-γ ELISpot was not performed because a sample was absent (two of six) or a sample had insufficient cell numbers (four of six)."
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan s/o Debasis Roy, a 52-year-old patient, presented to Apollo Hospital Chennai on 25 May 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9912829549 and ABHA ID 48-2645-6471-6914. Patch testing was performed in few cases (13 of 79), because it was initiated later in the study with multiple patients uncontactable or unwilling to return."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee s/o R. Raghavan, a 60-year-old patient, presented to AIIMS New Delhi on 30 October 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9006951120 and ABHA ID 84-5822-3228-8914. Six patients had all diagnostic tests performed."
+        }
+    },
+    {
+        "data": {
+            "text": "Behera s/o Pradeep Pattnaik, a 64-year-old patient, presented to AIIMS New Delhi on 20 March 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9242328151 and ABHA ID 63-5303-7803-5456. Venn diagram created by Yang et al. 32 DRESS , drug reaction with eosinophilia and systemic symptoms; GBFDR , generalized bullous fixed drug reaction; SCAR , severe cutaneous adverse reaction; SJS , Stevens-Johnsons syndrome; TEN , toxic epidermal necrolysis. . Demographics and characteristics of patients with severe cutaneous adverse reaction Patient characterisitic Total = 79 Drug reaction with eosinophilia and systemic symptoms = 55 G generalized bullous fixed drug reaction = 10 Stevens-Johnsons syndrome/toxic epidermal necrolysis = 14 Age (mean [SD]) 39 (11) 38 (11) 44 (7) 38 (11) Male sex, n (%) 41 (52) 25 (46) 8 (80) 8 (57) Positive for tuberculosis, n (%) 60 (76) 44 (80) 5 (50) 11 (79) Site of tuberculosis, n (%) Extrapulmonary 22 (37) 18 (41) 4 (36) Pulmonary 38 (63) 26 (59) 5 (100) 7 (64) Positive HIV status, n (%) 71 (90) 51 (93) 6 (60) 14 (100) CD4 count(median [IQR]) 77 (25–142) 84.0 (32–142) 162 (85–182) 42 (20–86) Receiving antiretroviral therapy, n (%) 39 (55) 28 (55) 2 (33) 9 (64) Latency Drug latency, d (median [IQR] * 16 (6–34) 25 (8–37) 1 (1–3) 16 (8–21) Patch latency, d (median [IQR] (n = 13) 37 (21–98) 67 (25–145) 21 (18–37) 58 (55–60) Oral challenge latency, d (median [IQR] (n = 10) 46 (44–93) 46 (32–91) 46 (45–851) 52 (52–52) ‡ ELISpot latency, d (median [IQR]) † (n = 10) 15 (8–43) 22 (10–48) 9 (7–14) 11 (8–19) ELISpot , enzyme-linked immunospot; IQR , interquartile range. * One patient was missing the drug latency drug start and stop date. † Two patients were missing data on oral challenge start days. ‡ Only one patient."
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta w/o Pradeep Pattnaik, a 43-year-old patient, presented to Fortis Hospital Kolkata on 21 November 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9527601929 and ABHA ID 16-4692-1908-1822. ( 2020 ) Case–control study and clinical chart review Present the clinical characteristics of patients with gender diverse identities admitted to a mixed gender secure psychiatric hospital for adolescents Total N = 41 (ASD = NR, GD = 13) Total Male = 0, Total Female = 41 (ASD = NR, GD = 13) Total Male = 6 (ASD = NR, GD = 6), Total Female = 28 (ASD = NR, GD = 0), Total Other = 7 (ASD = NR, GD = 7), 13.8 to 17.8 years UK Hilton et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Verma s/o Debasis Mohanty, a 68-year-old patient, presented to KIMS Hospital Bhubaneswar on 30 August 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9392171242 and ABHA ID 54-6682-6931-8166. ( 2021 ) Clinical Chart Review Illuminate the clinical profile of transgender and gender diverse patients in an Australian clinic Total N = 359 (ASD = 58; GD = 3) Total Male = 166 (ASD = 37; GD = 162), Total Female = 193 (ASD = 21; GD = 191) Total Male = 178 (ASD = NR; GD = 174), Total Female = 141 (ASD = NR; GD = 139), Total Non-Binary = 26 (ASD = NR; GD = 26), Total Not Sure = 14 (ASD = NR; GD = 14) 3.6 to 18.1 years Australia van der Miesen et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Das w/o Pradeep Pattnaik, a 22-year-old patient, presented to Narayana Health Bengaluru on 25 April 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9204928079 and ABHA ID 53-2088-9719-3801. ( 2023 b) (Healthcare clinician perspectives on the intersection of autism and gender dysphoria) Qualitative interview Illuminate the perspectives of clinicians working with autistic patients with gender diverse identities Total N = 16 (ASD = NR; GD = NR) NR Total Male = 3 (ASD = NR; GD = NR), Total Female = 13 (ASD = NR; GD = NR) NR International (online survey) Folta et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Banerjee w/o Kavita Sharma, a 49-year-old patient, presented to AIIMS New Delhi on 04 October 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9661248033 and ABHA ID 53-8438-4109-9153. ( 2023 ) Case study Present a fictionalized case study that is an amalgamation of several patients with OCD, autism, and a gender diverse identity Total N = 1 (ASD = 1; GD = 1) Total Male = 0 (ASD = 0; GD = 0), Total Female = 1 (ASD = 1; GD = 1) Total Gender-neutral = 1 (ASD = 1, GD = 1) 17 years USA Hillier et al."
+        }
+    },
+    {
+        "data": {
+            "text": "Chatterjee s/o Soumya Chatterjee, a 72-year-old patient, presented to Narayana Health Bengaluru on 05 February 2021 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9660119254 and ABHA ID 55-3191-3269-4367. London: Wiley. 10.1002/14651858.ED000142 PMC10284251 31643080 Hill SA Thorpe A Petrauskaite R Wilson S Characteristics of patients with Gender Dysphoria admitted to a secure forensic adolescent hospital The Journal of Forensic Psychiatry and Psychology 2020 31 6 854 867 10.1080/14789949.2020.1807583 *Hill, S. A., Thorpe, A., Petrauskaite, R., &amp; Wilson, S. (2020)."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan s/o Debasis Roy, a 49-year-old patient, presented to KIMS Hospital Bhubaneswar on 18 August 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9884956287 and ABHA ID 14-7193-2506-7875. Characteristics of patients with Gender Dysphoria admitted to a secure forensic adolescent hospital."
+        }
+    },
+    {
+        "data": {
+            "text": "Narayanan s/o Subramaniam Venkataraman, a 19-year-old patient, presented to Narayana Health Bengaluru on 26 February 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9847763678 and ABHA ID 56-9500-8494-2085. Los Angeles: Western Psychological Services. Saunders CL Berner A Lund J Mason AM Oakes-Monger T Roberts M Smith J Duschinsky R Demographic characteristics, long-term health conditions and healthcare experiences of 6333 trans and non-binary adults in England: Nationally representative evidence from the 2021 GP Patient Survey British Medical Journal Open 2023 13 2 e068099 e068099 10.1136/bmjopen-2022-068099 PMC9895920 36731935 *Saunders, C. L., Berner, A., Lund, J., Mason, A. M., Oakes-Monger, T., Roberts, M., Smith, J., &amp; Duschinsky, R. (2023)."
+        }
+    },
+    {
+        "data": {
+            "text": "Das w/o Debasis Roy, a 64-year-old patient, presented to Apollo Hospital Chennai on 31 August 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Debasis Roy. Hospital records include contact number 9209198501 and ABHA ID 54-5736-2823-4958. Demographic characteristics, long-term health conditions and healthcare experiences of 6333 trans and non-binary adults in England: Nationally representative evidence from the 2021 GP Patient"
+        }
+    },
+    {
+        "data": {
+            "text": "Krishnan w/o Kavita Sharma, a 63-year-old patient, presented to KIMS Hospital Bhubaneswar on 26 September 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9693645952 and ABHA ID 46-1820-9722-9904. 10.1136/bmjopen-2018-024265 10.1136/bmjopen-2018-024265 PMC6561450 31167856 Tollit MA May T Maloof T Telfer MM Chew D Engel M Pang K The clinical profile of patients attending a large, Australian pediatric gender service: a 10-year review International Journal of Transgender Health 2021 10.1080/26895269.2021.1939221 36713143 PMC9879187 *Tollit, M. A., May, T., Maloof, T., Telfer, M. M., Chew, D., Engel, M., &amp; Pang, K. (2021)."
+        }
+    },
+    {
+        "data": {
+            "text": "Sharma s/o Soumya Chatterjee, a 76-year-old patient, presented to Narayana Health Bengaluru on 13 March 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Anjali Rao. Hospital records include contact number 9399739745 and ABHA ID 59-8389-7753-9016. The clinical profile of patients attending a large, Australian pediatric gender service: a 10-year review."
+        }
+    },
+    {
+        "data": {
+            "text": "Gupta s/o Anita Mishra, a 24-year-old patient, presented to KIMS Hospital Bhubaneswar on 09 April 2023 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9760624632 and ABHA ID 16-1028-2012-6930. A patient with an incidentally detected parotid mass on MRI underwent core biopsy, which was unfortunately complicated by formation of a pseudoaneurysm and persistent arterial bleeding requiring coil embolisation."
+        }
+    },
+    {
+        "data": {
+            "text": "Singh w/o Sunita Sharma, a 75-year-old patient, presented to Apollo Hospital Chennai on 17 April 2025 with complaints recorded in the clinical report. The patient was evaluated by Dr. S. Krishnan. Hospital records include contact number 9383440373 and ABHA ID 64-5336-6619-8938. A patient receiving chronic warfarin for paroxysmal atrial fibrillation was admitted due to atrial fibrillation with rapid ventricular response (RVR)."
+        }
+    },
+    {
+        "data": {
+            "text": "Pattnaik s/o Madhusmita Das, a 78-year-old patient, presented to Narayana Health Bengaluru on 07 February 2022 with complaints recorded in the clinical report. The patient was evaluated by Dr. Arindam Ghosh. Hospital records include contact number 9286102466 and ABHA ID 14-6010-5225-4979. Following the initiation of the amiodarone infusion, the patient experienced bleeding attributed to warfarin-amiodarone-induced coagulopathy, with no identifiable bleeding source."
+        }
+    }
+]
