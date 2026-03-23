@@ -8,60 +8,75 @@ def find_entities(text):
 
     entities = []
 
-    # 1. PATIENT NAME (start of sentence)
-    match = re.match(r'^([A-Z][a-z]+ [A-Z][a-z]+)', text)
+    # 🔥 1. PATIENT + RELATIVE NAME
+
+    relation_pattern = r'^([A-Z][a-zA-Z\.]+(?: [A-Z][a-zA-Z]+)+)\s+(s/o|w/o|d/o|h/o)\s+([A-Z][a-zA-Z\.]+(?: [A-Z][a-zA-Z]+)+)'
+    match = re.search(relation_pattern, text)
+
     if match:
-        entities.append((match.start(), match.end(), "PATIENT_NAME"))
+        entities.append((match.start(1), match.end(1), "PATIENT_NAME"))
+        entities.append((match.start(3), match.end(3), "RELATIVE_NAME"))
 
-    # 2. DOCTOR (WITHOUT "Dr.")
-    for match in re.finditer(r'Dr\. ([A-Z][a-z]+ [A-Z][a-z]+)', text):
-        start = match.start(1)
-        end = match.end(1)
-        entities.append((start, end, "DOCTOR"))
+    else:
+        match = re.match(r'^([A-Z][a-zA-Z\.]+(?: [A-Z][a-zA-Z]+)+)', text)
+        if match:
+            entities.append((match.start(1), match.end(1), "PATIENT_NAME"))
 
-    # 3. PHONE NUMBER
+    # 🔥 2. DOCTOR (with initials)
+    for match in re.finditer(r'Dr\. ([A-Z][a-zA-Z\.]+(?: [A-Z][a-zA-Z]+)+)', text):
+        entities.append((match.start(1), match.end(1), "DOCTOR"))
+
+    # 🔥 3. PHONE
     for match in re.finditer(r'\b[6-9]\d{9}\b', text):
         entities.append((match.start(), match.end(), "PHONE_NUMBER"))
 
-    # 4. ABHA ID
+    # 🔥 4. ABHA
     for match in re.finditer(r'\b\d{2}-\d{4}-\d{4}-\d{4}\b', text):
         entities.append((match.start(), match.end(), "ABHA_ID"))
 
-    # 5. DATE
+    # 🔥 5. DATE
     for match in re.finditer(
         r'\b\d{1,2} (January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b',
         text):
         entities.append((match.start(), match.end(), "DATE"))
 
-    # 6. AGE (ONLY NUMBER)
-    for match in re.finditer(r'\b(\d{1,3})-year-old\b', text):
-        start = match.start(1)
-        end = match.end(1)
-        entities.append((start, end, "AGE"))
+    # 🔥 6. AGE (ONLY FIRST)
+    match = re.search(r'\b\d{1,3}-year-old\b', text)
+    if match:
+        entities.append((match.start(), match.end(), "AGE"))
 
-    # 🔥 7. HOSPITAL NAME (HYBRID FIXED)
+    # 🔥 7. HOSPITAL NAME (UPGRADED LOGIC)
 
     hospital_found = False
 
-    # METHOD 1: Context-based (priority)
-    for match in re.finditer(r'presented to (.*?) on', text):
-        entities.append((match.start(1), match.end(1), "HOSPITAL_NAME"))
-        hospital_found = True
+    # ✅ METHOD 1: context-based
+    context_pattern = r'presented to ([A-Z][A-Za-z ]+?) on'
+    match = re.search(context_pattern, text)
 
-    # METHOD 2: Keyword fallback (only if context not found)
+    if match:
+        hospital = match.group(1)
+
+        # validate hospital-like keywords
+        if any(word in hospital for word in ["Hospital", "Health", "Clinic", "Centre", "Institute", "AIIMS"]):
+            entities.append((match.start(1), match.end(1), "HOSPITAL_NAME"))
+            hospital_found = True
+
+    # ✅ METHOD 2: strong direct match (AIIMS + known hospitals)
     if not hospital_found:
-        hospital_keywords = [
-            "Hospital", "Clinic", "Centre", "Center",
-            "Medical College", "Institute", "Nursing Home",
-            "Healthcare", "Health", "Care"
-        ]
+        strong_pattern = r'\b(AIIMS [A-Za-z ]+|Apollo Hospital [A-Za-z ]+|Fortis Hospital [A-Za-z ]+|KIMS Hospital [A-Za-z ]+|Narayana Health [A-Za-z ]+)\b'
 
-        pattern = r'\b([A-Z][a-zA-Z]+(?: [A-Z][a-zA-Z]+)* (' + '|'.join(hospital_keywords) + r'))\b'
+        for match in re.finditer(strong_pattern, text):
+            entities.append((match.start(), match.end(), "HOSPITAL_NAME"))
+            hospital_found = True
 
-        for match in re.finditer(pattern, text):
+    # ✅ METHOD 3: generic fallback
+    if not hospital_found:
+        generic_pattern = r'\b([A-Z][a-zA-Z]+(?: [A-Z][a-zA-Z]+)* (Hospital|Clinic|Centre|Institute|Medical College|Healthcare|Health))\b'
+
+        for match in re.finditer(generic_pattern, text):
             entities.append((match.start(), match.end(), "HOSPITAL_NAME"))
 
-    # 🔥 REMOVE DUPLICATES + SORT
+    # 🔥 REMOVE DUPLICATES
     entities = sorted(set(entities), key=lambda x: x[0])
 
     return entities
@@ -104,8 +119,8 @@ for item in data:
         ]
     })
 
-# SAVE FILE
+# SAVE
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
-print("✅ Final clean auto-labeled dataset ready 🚀")
+print("✅ FINAL script with AIIMS + all hospitals fixed 🚀")
