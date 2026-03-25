@@ -347,17 +347,17 @@ labelling.py
 auto_labeled.json
 ```
 
-* The auto-labeled data was further cleaned and converted into spaCy training format using:
+* The auto-labeled data was further cleaned and converted into adv_auto_labeled.json training format using:
 
 ```
-convert_spcy.py
+adv_labelling.py
 ```
 
 * Final output file:
 
 ```
-spacy_clean_final.json
+adv_auto_labeled.json 
 ```
 
-* This final file contains cleaned, non-overlapping entity spans and is ready for NER model training.
+* This also contains a file convert_spcy.py which takes adv_auto_labeled.json as input and gives output as spacy_clean_final.json.
 
