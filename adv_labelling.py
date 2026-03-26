@@ -3,7 +3,7 @@ import re
 import random
 
 input_file = "500_ner_records.json"
-output_file = "adv_auto_labeled.json"
+output_file = "adv_auto_labeled1.json"
 
 # 🔥 INDIAN DIVERSITY
 
@@ -19,6 +19,9 @@ hospitals = [
 doctors = ["Anjali Rao","R.K. Mehta","S. Krishnan","Debasis Roy","Arindam Ghosh"]
 
 months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+# 🔥 CONNECTORS (FIXED)
+connectors = ["s/o", "w/o", "d/o", "h/o"]
 
 def rand_name():
     return f"{random.choice(first_names)} {random.choice(last_names)}"
@@ -48,8 +51,11 @@ def rebuild(text):
     date = rand_date()
     age = rand_age()
 
+    # 🔥 RANDOM CONNECTOR (FIX)
+    connector = random.choice(connectors)
+
     new_text = (
-        f"{patient} w/o {relative}, a {age} patient, presented to {hospital} on {date}. "
+        f"{patient} {connector} {relative}, a {age} patient, presented to {hospital} on {date}. "
         f"Evaluated by Dr. {doctor}. Contact number {phone}. ABHA ID {abha}."
     )
 
@@ -60,11 +66,14 @@ def find_entities(text):
 
     entities = []
 
-    # PATIENT + RELATIVE
-    match = re.search(r'([A-Z][a-zA-Z]+ [A-Z][a-zA-Z]+)\s+w/o\s+([A-Z][a-zA-Z]+ [A-Z][a-zA-Z]+)', text)
+    # 🔥 PATIENT + RELATIVE (FIXED REGEX)
+    match = re.search(
+        r'([A-Z][a-zA-Z]+ [A-Z][a-zA-Z]+)\s+(s/o|w/o|d/o|h/o)\s+([A-Z][a-zA-Z]+ [A-Z][a-zA-Z]+)',
+        text
+    )
     if match:
         entities.append((match.start(1), match.end(1), "PATIENT_NAME"))
-        entities.append((match.start(2), match.end(2), "RELATIVE_NAME"))
+        entities.append((match.start(3), match.end(3), "RELATIVE_NAME"))
 
     # AGE
     match = re.search(r'\b\d{1,3}-year-old\b', text)
@@ -111,7 +120,7 @@ for item in data:
 
     required = ["PATIENT_NAME","RELATIVE_NAME","AGE","HOSPITAL_NAME","DATE","DOCTOR","PHONE_NUMBER","ABHA_ID"]
 
-    # 🔥 IF ANY MISSING → FULL REBUILD (SAFEST)
+    # 🔥 IF ANY MISSING → FULL REBUILD
     if not all(r in labels_present for r in required):
         text = rebuild(text)
         entities = find_entities(text)
@@ -140,4 +149,4 @@ for item in data:
 with open(output_file, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=4, ensure_ascii=False)
 
-print("✅ FINAL: Missing entities auto-built + correctly labeled 🚀")
+print("✅ FINAL FIXED: All connectors (s/o, w/o, d/o, h/o) included 🚀")

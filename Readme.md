@@ -1,3 +1,4 @@
+```markdown
 # Indian Clinical NER Corpus – Data Generation
 
 This repository contains scripts used to generate a synthetic and semi-synthetic corpus for **Indian clinical Named Entity Recognition (NER)** experiments.
@@ -27,7 +28,7 @@ Every snippet is designed to contain the following entity types:
 
 Examples of patterns used include:
 
-* `s/o` and `w/o` relationships
+* `s/o`, `w/o`, `d/o`, `h/o` relationships
 * hyphenated ABHA IDs (e.g. `12-3456-7890-1234`)
 * age expressions such as `45-year-old`
 * Indian hospital names and doctor designations
@@ -50,13 +51,17 @@ The script:
 Script used:
 
 ```
+
 generate_ner_snippets.py
+
 ```
 
 Output:
 
 ```
+
 pub_ner_snippets_200.txt
+
 ```
 
 Total snippets generated from PubMed: **200**
@@ -76,13 +81,17 @@ The script:
 Script used:
 
 ```
+
 generate_pmc_snippets.py
+
 ```
 
 Output:
 
 ```
+
 pmc_ner_snippets_150.txt
+
 ```
 
 Total snippets generated from PMC: **150**
@@ -115,13 +124,17 @@ The LLM rewrites these prompts into natural clinical documentation style text wh
 Script used:
 
 ```
+
 generate_llm_clinical_notes.py
+
 ```
 
 Output:
 
 ```
+
 llm_clinical_ner_snippets_150.txt
+
 ```
 
 Total synthetic snippets generated: **150**
@@ -139,7 +152,9 @@ Total synthetic snippets generated: **150**
 Total snippets generated:
 
 ```
+
 500 clinical text snippets
+
 ```
 
 ---
@@ -157,14 +172,16 @@ The dataset intentionally **does not contain real patient records**.
 ## Generated Output Files
 
 ```
+
 pub_ner_snippets_200.txt
 pmc_ner_snippets_150.txt
 llm_clinical_ner_snippets_150.txt
+
 ```
 
 ---
 
-# 🚀 NEW UPDATES (DATA PIPELINE + ANNOTATION)
+# NEW UPDATES (DATA PIPELINE + ANNOTATION)
 
 ## 🔧 Data Processing Added
 
@@ -178,51 +195,63 @@ After initial generation, the dataset is further processed to make it **model-re
 Generated JSON files:
 
 ```
+
 pub_ner_clean_200.json
 pmc_ner_clean_150.json
 llm_ner_context_fixed.json
+
 ```
 
 ---
 
-## 🤖 Synthetic Data Augmentation
+## Synthetic Data Augmentation
 
 To improve dataset diversity and balance:
 
 Script used:
 
 ```
+
 generate_llm_extra_80.py
+
 ```
 
 Output:
 
 ```
+
 llm_generated_extra_80.json
+
 ```
 
 ---
 
-## 🔗 Final Dataset Merge
+## Final Dataset Merge
 
 All datasets are merged into a single file:
 
 Script:
 
 ```
+
 merge_all_json.py
+
 ```
 
 Final Output:
 
 ```
+
 500_ner_records.json
+
 ```
 
 Final dataset size:
 
 ```
+
 ~500+ clinical NER samples
+
 ```
 
 ---
@@ -234,130 +263,121 @@ The dataset is annotated using **Label Studio**.
 ### Installation
 
 ```
+
 pip install label-studio
+
 ```
 
 ### Run
 
 ```
+
 label-studio
+
 ```
 
 Open in browser:
 
 ```
-http://localhost:8080
+
+[http://localhost:8080](http://localhost:8080)
+
 ```
 
 ---
 
-### Project Configuration
+# AUTO LABELING + FINAL DATASET
 
-* Project Name: Clinical NER Final
-* Task: Named Entity Recognition
+## 🔗 Auto Labeling Pipeline
+
+The dataset is automatically labeled using:
+
+```
+
+adv_labelling.py
+
+```
+
+### Features:
+
+* Detects all entity types
+* Supports Indian relationship connectors:
+  `s/o`, `w/o`, `d/o`, `h/o`
+* Ensures each record contains all required entities
+* Automatically rebuilds incomplete samples
 
 ---
 
-### Label Configuration
+## Final Labeled Dataset
 
 ```
+
+500_ner_records.json       → raw merged dataset
+adv_auto_labeled.json     → backup / intermediate output
+adv_auto_labeled1.json    → final auto-labeled dataset (USED FOR TRAINING)
+
+````
+
+---
+
+##  Label Studio Config (UPDATED)
+
+```xml
 <View>
   <Labels name="label" toName="text">
-    <Label value="NAME"/>
+
+    <Label value="PATIENT_NAME"/>
+    <Label value="RELATIVE_NAME"/>
     <Label value="AGE"/>
-    <Label value="HOSPITAL"/>
+    <Label value="HOSPITAL_NAME"/>
     <Label value="DATE"/>
     <Label value="DOCTOR"/>
-    <Label value="PHONE"/>
-    <Label value="ABHA"/>
+    <Label value="PHONE_NUMBER"/>
+    <Label value="ABHA_ID"/>
+
   </Labels>
 
   <Text name="text" value="$text"/>
 </View>
-```
+````
+
+**Note:** Label names are aligned with the final JSON (`adv_auto_labeled1.json`).
 
 ---
 
-### Data Import
+## Important Notes
 
-Upload:
+* `adv_auto_labeled.json` has **NOT been deleted intentionally**
+  → kept for:
+
+  * future understanding
+  * debugging
+  * making improvements
+
+* `convert_spcy.py` has **NOT been executed yet**
+  → If required, simply run:
 
 ```
-500_ner_records.json
+python convert_spcy.py
 ```
+
+→ It will generate spaCy-compatible training data.
 
 ---
 
-### Annotation Guidelines
+## Final Outcome
 
-* Use **minimal span**
-* Avoid including prefixes (e.g., "Dr.")
-* Label exact entity text only
+The dataset ensures:
 
----
-
-## 📌 Final Outcome
-
-This project now includes:
-
-* Multi-source clinical data generation
-* Data cleaning and normalization
-* Structured dataset creation (JSON)
-* Synthetic data augmentation
-* Annotation pipeline using Label Studio
-
-
----
----
-
-## 🏷️ Annotation & Final Dataset Preparation (D3 Work)
-
-After completing the data generation step, the dataset was manually annotated to prepare it for NER model training.
-
-### Label Studio Setup
-
-* Installed and configured **Label Studio** locally
-* Created a new project for NER annotation
-* Defined 7 entity labels:
-
-  * NAME
-  * AGE
-  * HOSPITAL
-  * DATE
-  * DOCTOR
-  * PHONE
-  * ABHA
-
+* All required entity types are present
+* Indian naming diversity is preserved
+* All relationship connectors are covered
+* No real patient data (PII) is used
 
 ---
 
-## 🔧 Additional Annotation Pipeline Details
 
-* A subset of **25 samples** was manually annotated using Label Studio and exported as JSON for reference.
 
-* The full dataset (`500_ner_records.json`) was then automatically labeled using:
 
-```
-labelling.py
-```
 
-* This produced:
-
-```
-auto_labeled.json
-```
-
-* The auto-labeled data was further cleaned and converted into adv_auto_labeled.json training format using:
-
-```
-adv_labelling.py
-```
-
-* Final output file:
-
-```
-adv_auto_labeled.json 
-```
-
-* This also contains a file convert_spcy.py which takes adv_auto_labeled.json as input and gives output as spacy_clean_final.json.
 

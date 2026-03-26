@@ -1,6 +1,6 @@
 import json
 
-INPUT_FILE = "adv_auto_labeled.json"
+INPUT_FILE = "adv_auto_labeled1.json"
 OUTPUT_FILE = "spacy_clean_final.json"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
