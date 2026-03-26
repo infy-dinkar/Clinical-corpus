@@ -346,6 +346,18 @@ auto_labeled.json         → earlier version of auto-labeling (kept for referen
 
 ---
 
+## 🔧 Data Cleaning Update
+
+During final validation, a small number of samples (2 records) were found where the `PATIENT_NAME` and `RELATIVE_NAME` were identical.
+
+These records were logically inconsistent and could negatively impact model learning.
+
+Hence, they were removed from the dataset to maintain data quality and correctness.
+
+removing_duplicated.py is removing the duplicates and producing a proper cleaned file as final_clean_adv_auto_labeled1.json.
+
+Final dataset size after cleaning: **514 samples**
+
 ## Important Notes
 
 * `adv_auto_labeled.json` has **NOT been deleted intentionally**
