@@ -315,6 +315,7 @@ adv_labelling.py
 500_ner_records.json       → raw merged dataset
 adv_auto_labeled.json     → backup / intermediate output
 adv_auto_labeled1.json    → final auto-labeled dataset (USED FOR TRAINING)
+auto_labeled.json         → earlier version of auto-labeling (kept for reference and comparison)
 
 ````
 
