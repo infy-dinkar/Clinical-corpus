@@ -1,101 +1,59 @@
 import json
+import random
+import spacy
+from spacy.tokens import DocBin
+from spacy.training import Example
 
-INPUT_FILE = "adv_auto_labeled1.json"
-OUTPUT_FILE = "spacy_clean_final.json"
-
-with open(INPUT_FILE, "r", encoding="utf-8") as f:
+# Load your exported Label Studio JSON
+with open("adv_auto_labeled1.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
-spacy_data = []
-error_count = 0
-fixed_count = 0
+# Convert Label Studio format to spaCy (text, {"entities": [(start, end, label)]})
+def convert(ls_data):
+    training = []
+    for item in ls_data:
+        text = item["data"]["text"]
+        entities = []
 
-print(f"Total tasks loaded: {len(data)}")
+        # Check both "annotations" and "predictions" (auto-labeled data uses "predictions")
+        sources = item.get("annotations", []) + item.get("predictions", [])
 
-for task in data:
+        for ann in sources:
+            for result in ann.get("result", []):
+                if result["type"] == "labels":
+                    start = result["value"]["start"]
+                    end = result["value"]["end"]
+                    label = result["value"]["labels"][0]
+                    entities.append((start, end, label))
 
-    text = task["data"]["text"]
+        training.append((text, {"entities": entities}))
+    return training
 
-    # 🔥 use predictions
-    if not task.get("predictions") or len(task["predictions"]) == 0:
-        # keep empty sample also (important)
-        spacy_data.append((text, {"entities": []}))
-        continue
+all_data = convert(data)
 
-    entities = []
+# Stratified 80/20 split — shuffle then split
+random.seed(42)
+random.shuffle(all_data)
+split = int(len(all_data) * 0.8)
+train_data = all_data[:split]
+dev_data = all_data[split:]
 
-    for ann in task["predictions"][0]["result"]:
+# Save to .spacy files
+nlp = spacy.blank("en")
 
-        value = ann["value"]
+def save_spacy(data, path):
+    db = DocBin()
+    for text, annotations in data:
+        doc = nlp.make_doc(text)
+        ents = []
+        for start, end, label in annotations["entities"]:
+            span = doc.char_span(start, end, label=label)
+            if span is not None:
+                ents.append(span)
+        doc.ents = ents
+        db.add(doc)
+    db.to_disk(path)
 
-        start = value["start"]
-        end = value["end"]
-        label = value["labels"][0]
-
-        # 🔥 fix leading spaces
-        while start < end and text[start] == " ":
-            start += 1
-
-        # 🔥 fix trailing spaces
-        while end > start and text[end - 1] == " ":
-            end -= 1
-
-        if start >= end:
-            error_count += 1
-            continue
-
-        entity_text = text[start:end]
-
-        # 🔥 strip fix
-        stripped = entity_text.strip()
-
-        if entity_text != stripped:
-            diff_left = len(entity_text) - len(entity_text.lstrip())
-            diff_right = len(entity_text) - len(entity_text.rstrip())
-
-            start += diff_left
-            end -= diff_right
-            fixed_count += 1
-
-        if start >= end:
-            error_count += 1
-            continue
-
-        entities.append((start, end, label))
-
-    # 🔥 remove duplicates
-    entities = list(set(entities))
-
-    # 🔥 remove overlaps (keep longest)
-    clean_entities = []
-    last_end = -1
-
-    for start, end, label in sorted(entities, key=lambda x: (x[0], -(x[1]-x[0]))):
-        if start >= last_end:
-            clean_entities.append((start, end, label))
-            last_end = end
-
-    entities = clean_entities
-
-    # 🔥 KEEP ONLY FIRST OCCURRENCE PER LABEL
-    filtered_entities = []
-    seen_labels = set()
-
-    for start, end, label in entities:
-        if label not in seen_labels:
-            filtered_entities.append((start, end, label))
-            seen_labels.add(label)
-
-    entities = filtered_entities
-
-    # 🔥 IMPORTANT: DO NOT DROP SAMPLE
-    spacy_data.append((text, {"entities": entities}))
-
-# SAVE
-with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(spacy_data, f, indent=2, ensure_ascii=False)
-
-print("✅ Conversion + Cleaning Done")
-print(f"Total samples: {len(spacy_data)}")
-print(f"Fixed spans: {fixed_count}")
-print(f"Removed invalid spans: {error_count}")
+save_spacy(train_data, "train.spacy")
+save_spacy(dev_data, "dev.spacy")
+print(f"train: {len(train_data)}, dev: {len(dev_data)}")
