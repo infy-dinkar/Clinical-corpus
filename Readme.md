@@ -367,14 +367,16 @@ Final dataset size after cleaning: **514 samples**
   * debugging
   * making improvements
 
-* `convert_spcy.py` has **NOT been executed yet**
-  → If required, simply run:
+* `convert_spcy.py`  **Execution Done**
+  
 
 ```
 python convert_spcy.py
 ```
 
 → It will generate spaCy-compatible training data.
+→ dev.spacy---->testing.
+→ train.spacy------>training.
 
 ---
 
@@ -386,6 +388,8 @@ The dataset ensures:
 * Indian naming diversity is preserved
 * All relationship connectors are covered
 * No real patient data (PII) is used
+* dev.spacy----->testing
+* train.spacy----->training
 
 ---
 
